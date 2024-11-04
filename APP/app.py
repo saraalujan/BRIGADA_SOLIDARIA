@@ -4,23 +4,23 @@ app = Flask(__name__)
 
 @app.route("/about")
 def about():
-    render_template("about.html")
+    return render_template("abnut.html")
 
 @app.route("/contact")
 def contact():
-    render_template("contact.html")
+    return render_template("contact.html")
 
 @app.route("/")
 def index():
-    render_template("index.html")
+    return render_template("index.html")
 
 @app.route("/service")
 def service():
-    render_template("service.html")
+    return render_template("service.html")
 
 @app.route("/work")
 def work():
-    render_template("work.html")
+    return render_template("work.html")
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=True,port=8080)
