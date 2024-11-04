@@ -41,25 +41,25 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/static/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/static/css'>
+	<link href="https://fonts.googleapis.com/static/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
 	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
+	<!-- Animate.static/css -->
+	<link rel="stylesheet" href="{{url_for(static/css/animate.static/css)}}">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="{{url_for(static/css/icomoon.static/css)}}">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="{{url_for(static/css/bootstrap.static/css)}}">
 	<!-- Superfish -->
-	<link rel="stylesheet" href="css/superfish.css">
+	<link rel="stylesheet" href="{{url_for(static/css/superfish.static/css)}}">
 	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="{{url_for(static/css/flexslider.static/css)}}">
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="{{url_for(static/css/style.static/css)}}">
 
 
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="{{url_for(static/js/modernizr-2.6.2.min.js)}}"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -74,24 +74,24 @@
 				<div class="container">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="index.html"><i class="icon-home2"></i>Beam</a></h1>
+						<h1 id="fh5co-logo"><a href="{{url_for(index.html)}}"><i class="icon-home2"></i>Beam</a></h1>
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li>
-									<a href="index.html">Home</a>
+									<a href="{{url_for(index.html)}}">Home</a>
 								</li>
-								<li><a class="active" href="work.html">Projects</a></li>
+								<li><a class="active" href="{{url_for(centros.html)}}">Projects</a></li>
 								<li>
-									<a href="services.html" class="fh5co-sub-ddown">Services</a>
+									<a href="{{url_for(estadisticas.html)}}" class="fh5co-sub-ddown">Services</a>
 									 <ul class="fh5co-sub-menu">
-									 	<li><a href="left-sidebar.html">Web Development</a></li>
-									 	<li><a href="right-sidebar.html">Branding &amp; Identity</a></li>
+									 	<li><a href="{{url_for(left-sidebar.html)}}">Web Development</a></li>
+									 	<li><a href="{{url_for(right-sidebar.html)}}">Branding &amp; Identity</a></li>
 										<li>
 											<a href="#" class="fh5co-sub-ddown">Free HTML5</a>
 											<ul class="fh5co-sub-menu">
 												<li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" target="_blank">Build</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=work-free-html5-template-bootstrap" target="_blank">Work</a></li>
+												<li><a href="http://freehtml5.co/preview/?item=-free-html5-template-bootstrap" target="_blank">Work</a></li>
 												<li><a href="http://freehtml5.co/preview/?item=light-free-html5-template-bootstrap" target="_blank">Light</a></li>
 												<li><a href="http://freehtml5.co/preview/?item=relic-free-html5-template-using-bootstrap" target="_blank">Relic</a></li>
 												<li><a href="http://freehtml5.co/preview/?item=display-free-html5-template-using-bootstrap" target="_blank">Display</a></li>
@@ -103,8 +103,8 @@
 										<li><a href="#">Photography</a></li> 
 									</ul>
 								</li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="{{url_for(sobre_nosotros.html)}}">About</a></li>
+								<li><a href="{{url_for(nuevos_centros.html)}}">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -129,36 +129,9 @@
 			  	</ul>
 		  	</div>
 		</aside>
-		<div id="fh5co-work-section">
+		<div id="fh5co--section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 text-center project">
-						<a href="#" class="grid-project">
-							<div class="image"><img src="images/project-1.jpg" alt="Project" class="img-responsive"></div>
-							<div class="desc">
-								<h3>Ohio Building</h3>
-								<span>Architecture</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 text-center project">
-						<a href="#" class="grid-project">
-							<div class="image"><img src="images/project-2.jpg" alt="Project" class="img-responsive"></div>
-							<div class="desc">
-								<h3>Ohio Building</h3>
-								<span>Architecture</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 text-center project">
-						<a href="#" class="grid-project">
-							<div class="image"><img src="images/project-3.jpg" alt="Project" class="img-responsive"></div>
-							<div class="desc">
-								<h3>Ohio Building</h3>
-								<span>Architecture</span>
-							</div>
-						</a>
-					</div>
 					<div class="col-md-4 text-center project">
 						<a href="#" class="grid-project">
 							<div class="image"><img src="images/project-4.jpg" alt="Project" class="img-responsive"></div>
@@ -244,13 +217,6 @@
 					</div>
 					<div class="row copy-right">
 						<div class="col-md-6 col-md-offset-3 text-center">
-							<p class="fh5co-social-icons">
-								<a href="#"><i class="icon-twitter2"></i></a>
-								<a href="#"><i class="icon-facebook2"></i></a>
-								<a href="#"><i class="icon-instagram"></i></a>
-								<a href="#"><i class="icon-dribbble2"></i></a>
-								<a href="#"><i class="icon-youtube"></i></a>
-							</p>
 							<p>&copy; 2016 Free Html5 <a href="#">Beam</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a></p>
 						</div>
 					</div>
