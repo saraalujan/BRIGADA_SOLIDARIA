@@ -276,7 +276,7 @@ figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0;
   }
 }
@@ -293,7 +293,7 @@ figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover.fh5co-cover_2 {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0;
   }
 }
@@ -359,7 +359,7 @@ figure {
   box-shadow: none;
   border: transparent;
   min-width: 12em;
-  *width: 12em;
+  width: 12em;
 }
 
 .sf-menu a {
@@ -417,7 +417,7 @@ figure {
 
 .sf-arrows .sf-with-ul {
   padding-right: 2.5em;
-  *padding-right: 1em;
+  padding-right: 1em;
 }
 
 .sf-arrows .sf-with-ul:after {
@@ -523,7 +523,7 @@ figure {
 #fh5co-primary-menu > li > .sf-with-ul:after {
   border: none !important;
   font-family: 'icomoon';
-  speak: none;
+  speak-as: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -546,7 +546,7 @@ figure {
 #fh5co-primary-menu > li > ul li > .sf-with-ul:after {
   border: none !important;
   font-family: 'icomoon';
-  speak: none;
+  speak-as: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -671,7 +671,7 @@ figure {
 }
 #fh5co-hero .flexslider .flex-direction-nav a:before {
   font-family: 'icomoon';
-  speak: none;
+  speak-as: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -686,7 +686,7 @@ figure {
 }
 #fh5co-hero .flexslider .flex-direction-nav a.flex-next:before {
   font-family: 'icomoon';
-  speak: none;
+  speak-as: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -927,7 +927,7 @@ figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 .fh5co-social li a {
   font-size: 22px;
@@ -938,7 +938,7 @@ figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
@@ -1303,7 +1303,7 @@ figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   width: 30px;
   height: 2px;
   color: #000;
