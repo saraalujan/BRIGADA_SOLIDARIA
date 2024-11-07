@@ -74,16 +74,16 @@
 				<div class="container">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="{{url_for('index.html')}}"><i class="icon-home2"></i>Brigada Solidaria</a></h1>
+						<h1 id="fh5co-logo"><a href="{{url_for('index')}}"><i class="icon-home2"></i>Brigada Solidaria</a></h1>
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li>
-									<a href="{{url_for('index.html')}}">Home</a>
+									<a href="{{url_for('index')}}">Home</a>
 								</li>
-								<li><a href="{{url_for('centros.html')}}">Centro</a></li>
-								<li><a href="{{url_for('sobre_nosotros.html')}}">Sobre nosotros</a></li>
-								<li><a href="{{url_for('nuevos_centros.html')}}">Nuevos centros</a></li>
+								<li><a href="{{url_for('centros')}}">Centro</a></li>
+								<li><a href="{{url_for('sobre_nosotros')}}">Sobre nosotros</a></li>
+								<li><a href="{{url_for('nuevos_centros')}}">Nuevos centros</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -222,21 +222,21 @@
 	<!-- jQuery -->
 
 
-	<script src="js/jquery.min.js'"></script>
+	<script src="{{url_for('static', filename = 'js/jquery.min.js') }}"></script>
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="{{url_for('static', filename = 'js/jquery.easing.1.3.js') }}"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js'"></script>
+	<script src="{{url_for('static', filename = 'js/bootstrap.min.js') }}"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="{{url_for('static', filename = 'js/jquery.waypoints.min.js') }}"></script>
 	<!-- Superfish -->
-	<script src="js/hoverIntent.js"></script>
-	<script src="js/superfish.js"></script>
+	<script src="{{url_for('static', filename = 'js/hoverIntent.js') }}"></script>
+	<script src="{{url_for('static', filename = 'js/superfish.js') }}"></script>
 	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="{{url_for('static', filename = 'js/jquery.flexslider-min.js') }}"></script>
 
 	<!-- Main JS (Do not remove) -->
-	<script src="js/main.js"></script>
+	<script src="{{url_for('static', filename = 'js/main.js') }}"></script>
 
 	</body>
 </html>
