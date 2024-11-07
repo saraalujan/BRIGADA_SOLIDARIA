@@ -45,21 +45,21 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="{{ url_for('css', filename='animate.css') }}">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="{{ url_for('css', filename='icomoon.css') }}">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="{{ url_for('css', filename='bootstrap.css') }}">
 	<!-- Superfish -->
-	<link rel="stylesheet" href="css/superfish.css">
+	<link rel="stylesheet" href="{{ url_for('css', filename='superfish.css') }}">
 	<!-- Flexslider -->
-	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="{{ url_for('css', filename='flexslider.css') }}">
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="{{ url_for('css', filename='style.css') }}">
 
 
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="{{ url_for('static', 'js/modernizr-2.6.2.min.js') }}"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -74,37 +74,17 @@
 				<div class="container">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="index.html"><i class="icon-home2"></i>Beam</a></h1>
+						<h1 id="fh5co-logo"><a href="{{ url_for('index.html') }}"><i class="icon-home2"></i>Beam</a></h1>
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li>
-									<a href="index.html">Home</a>
+									<a href="{{ url_for('index.html') }}">Inicio</a>
 								</li>
-								<li><a href="work.html">Projects</a></li>
-								<li>
-									<a href="services.html" class="fh5co-sub-ddown">Services</a>
-									 <ul class="fh5co-sub-menu">
-									 	<li><a href="left-sidebar.html">Web Development</a></li>
-									 	<li><a href="right-sidebar.html">Branding &amp; Identity</a></li>
-										<li>
-											<a href="#" class="fh5co-sub-ddown">Free HTML5</a>
-											<ul class="fh5co-sub-menu">
-												<li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" target="_blank">Build</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=work-free-html5-template-bootstrap" target="_blank">Work</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=light-free-html5-template-bootstrap" target="_blank">Light</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=relic-free-html5-template-using-bootstrap" target="_blank">Relic</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=display-free-html5-template-using-bootstrap" target="_blank">Display</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=sprint-free-html5-template-bootstrap" target="_blank">Sprint</a></li>
-											</ul>
-										</li>
-										<li><a href="#">UI Animation</a></li>
-										<li><a href="#">Copywriting</a></li>
-										<li><a href="#">Photography</a></li> 
-									</ul>
-								</li>
-								<li><a class="active" href="about.html">About</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="{{ url_for('centros.html') }}">Centros</a></li>
+								<li><a href="{{ url_for('estadisticas.html') }}" class="fh5co-sub-ddown">Estadisticas</a></li>
+								<li><a class="active" href="{{ url_for('sobre_nosotros.html') }}">Sobre nosotros</a></li>
+								<li><a href="{{ url_for('nuevos_centros.html') }}">Nuevos centros</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -115,13 +95,12 @@
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(images/slide_2.jpg);">
+			   	<li style="background-image: url(images/portada.jpg);">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
 			   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 			   				<div class="slider-text-inner desc">
-			   					<h2 class="heading-section">About Us</h2>
-			   					<p class="fh5co-lead">Designed with <i class="icon-heart3"></i> by the fine folks at <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a></p>
+			   					<h2 class="heading-section">Sobre nosotros</h2>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -133,41 +112,33 @@
 			<div class="container">
 				<div class="row about">
 					<div class="col-md-6">
-						<h2>Mission</h2>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+						<h2>Mision</h2>
+						<p>Brigada solidaria brinda datos de los centros de ayuda comunitaria a lo largo de la ciudad de Buenos Aires en donde encontraran camas, duchas, alimentos y todos los elementos necesarios para abastecer las necesidades basicas.</p>
 					</div>
 					<div class="col-md-6">
-						<h2>Vision</h2>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+						<h2>Visión</h2>
+						<p>Visión, el objetivo de este proyecto es que toda persona en situación de calle tenga la oportunidad de asistir a un centro en el cual pueda cubrir sus necesidades y encontrar un refugio tanto a nivel emocional como asi también alimento y refugio habitacional.</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-						<h2>The Team</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						<h2>El equipo</h2>
+						<p>Este equipo esta compuesto por cuatro estudiantes de ingeniería que ante esta problemática buscan darle solución a traves de sus conocimientos.</p>
 					</div>
 					<div class="col-md-4 fh5co-staff">
 						<img src="images/person1.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
 						<h3>Catalina, Debora, Sara y Jazmin</h3>
 						<h4>Estudiantes de Ingenieria</h4>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-						<ul class="fh5co-social">
-							<li><a href="#"><i class="icon-google"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-instagram"></i></a></li>
-						</ul>
+						<p>Texto corto sobre nosotroas y nuestra historia</p>
 					</div>
-					
-					
 				</div>
+			</div>
 		</div>
 	</div>
 		<footer>
 			<div id="footer">
 				<div class="container">
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-md-3">
 							<h3 class="section-title">About Us</h3>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
@@ -216,17 +187,13 @@
 								</div>
 							</form>
 						</div>
-					</div>
+					</div> -->
 					<div class="row copy-right">
 						<div class="col-md-6 col-md-offset-3 text-center">
-							<p class="fh5co-social-icons">
-								<a href="#"><i class="icon-twitter2"></i></a>
-								<a href="#"><i class="icon-facebook2"></i></a>
-								<a href="#"><i class="icon-instagram"></i></a>
-								<a href="#"><i class="icon-dribbble2"></i></a>
-								<a href="#"><i class="icon-youtube"></i></a>
-							</p>
+							
 							<p>&copy; 2016 Free Html5 <a href="#">Beam</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a></p>
+								<a href="#">Brigada Solidaria</a>. All Rights Reserved.
+								<br>Made with <i class="icon-heart3"></i> por el equipo <a href="https://brigadasolidaria.com" target="_blank">Brigada Solidaria</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a></p>
 						</div>
 					</div>
 				</div>

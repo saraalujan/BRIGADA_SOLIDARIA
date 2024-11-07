@@ -45,21 +45,21 @@
 	<link href="https://fonts.googleapis.com/static/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
 	
 	<!-- Animate.static/css -->
-	<link rel="stylesheet" href="{{url_for(static/css/animate.static/css)}}">
+	<link rel="stylesheet" href="{{ url_for('static', '/css/animate.static/css) }}">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="{{url_for(static/css/icomoon.static/css)}}">
+	<link rel="stylesheet" href="{{ url_for('static', '/css/icomoon.static/css) }}">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="{{url_for(static/css/bootstrap.static/css)}}">
+	<link rel="stylesheet" href="{{ url_for('static', '/css/bootstrap.static/css) }}">
 	<!-- Superfish -->
-	<link rel="stylesheet" href="{{url_for(static/css/superfish.static/css)}}">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="{{url_for(static/css/flexslider.static/css)}}">
+	<link rel="stylesheet" href="{{ url_for(s'tatic', '/css/superfish.static/css) }}">
+	<!-- Flexslider  --> 
+	<link rel="stylesheet" href="{{ url_for('static', '/css/flexslider.static/css) }}">
 
-	<link rel="stylesheet" href="{{url_for(static/css/style.static/css)}}">
+	<link rel="stylesheet" href="{{ url_for('static', '/css/style.static/css) }}">
 
 
 	<!-- Modernizr JS -->
-	<script src="{{url_for(static/js/modernizr-2.6.2.min.js)}}"></script>
+	<script src="{{ url_for('static', '/js/modernizr-2.6.2.min.js') }}"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -79,32 +79,12 @@
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li>
-									<a href="{{url_for(index.html)}}">Home</a>
+									<a href="{{url_for(index.html)}}">Inicio</a>
 								</li>
-								<li><a class="active" href="{{url_for(centros.html)}}">Projects</a></li>
-								<li>
-									<a href="{{url_for(estadisticas.html)}}" class="fh5co-sub-ddown">Services</a>
-									 <ul class="fh5co-sub-menu">
-									 	<li><a href="{{url_for(left-sidebar.html)}}">Web Development</a></li>
-									 	<li><a href="{{url_for(right-sidebar.html)}}">Branding &amp; Identity</a></li>
-										<li>
-											<a href="#" class="fh5co-sub-ddown">Free HTML5</a>
-											<ul class="fh5co-sub-menu">
-												<li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" target="_blank">Build</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=-free-html5-template-bootstrap" target="_blank">Work</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=light-free-html5-template-bootstrap" target="_blank">Light</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=relic-free-html5-template-using-bootstrap" target="_blank">Relic</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=display-free-html5-template-using-bootstrap" target="_blank">Display</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=sprint-free-html5-template-bootstrap" target="_blank">Sprint</a></li>
-											</ul>
-										</li>
-										<li><a href="#">UI Animation</a></li>
-										<li><a href="#">Copywriting</a></li>
-										<li><a href="#">Photography</a></li> 
-									</ul>
-								</li>
-								<li><a href="{{url_for(sobre_nosotros.html)}}">About</a></li>
-								<li><a href="{{url_for(nuevos_centros.html)}}">Contact</a></li>
+								<li><a class="active" href="{{url_for(centros.html)}}">Centros</a></li>
+								<li><a href="{{url_for(estadisticas.html)}}" class="fh5co-sub-ddown">Estadisticas</a></li>
+								<li><a href="{{url_for(sobre_nosotros.html)}}">Sobre nosotros</a></li>
+								<li><a href="{{url_for(nuevos_centros.html)}}">Nuevos centros</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -115,13 +95,12 @@
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(images/slide_1.jpg);">
+			   	<li style="background-image: url(images/portada.jpg);">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
 			   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 			   				<div class="slider-text-inner desc">
-			   					<h2 class="heading-section">Our Awesome Projects</h2>
-			   					<p class="fh5co-lead">Designed with <i class="icon-heart3"></i> by the fine folks at <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a></p>
+			   					<h2 class="heading-section">Nuestros centros</h2>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -136,8 +115,8 @@
 						<a href="#" class="grid-project">
 							<div class="image"><img src="images/project-4.jpg" alt="Project" class="img-responsive"></div>
 							<div class="desc">
-								<h3>Ohio Building</h3>
-								<span>Architecture</span>
+								<h3>Puentes de esperanza</h3>
+								<span>50 personas por noche</span>
 							</div>
 						</a>
 					</div>
@@ -145,8 +124,8 @@
 						<a href="#" class="grid-project">
 							<div class="image"><img src="images/project-5.jpg" alt="Project" class="img-responsive"></div>
 							<div class="desc">
-								<h3>Ohio Building</h3>
-								<span>Architecture</span>
+								<h3>Refugio renace</h3>
+								<span>60 personas por noche</span>
 							</div>
 						</a>
 					</div>
@@ -154,8 +133,8 @@
 						<a href="#" class="grid-project">
 							<div class="image"><img src="images/project-6.jpg" alt="Project" class="img-responsive"></div>
 							<div class="desc">
-								<h3>Ohio Building</h3>
-								<span>Architecture</span>
+								<h3>Mano en camino</h3>
+								<span>55 personas por noche</span>
 							</div>
 						</a>
 					</div>
@@ -165,7 +144,7 @@
 		<footer>
 			<div id="footer">
 				<div class="container">
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-md-3">
 							<h3 class="section-title">About Us</h3>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
@@ -214,10 +193,12 @@
 								</div>
 							</form>
 						</div>
-					</div>
+					</div>-->
 					<div class="row copy-right">
 						<div class="col-md-6 col-md-offset-3 text-center">
 							<p>&copy; 2016 Free Html5 <a href="#">Beam</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a></p>
+								<a href="#">Brigada Solidaria</a>. All Rights Reserved.
+								<br>Made with <i class="icon-heart3"></i> por el equipo <a href="https://brigadasolidaria.com" target="_blank">Brigada Solidaria</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a></p>
 						</div>
 					</div>
 				</div>
