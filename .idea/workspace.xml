@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed27476a-d7d7-427f-bc08-fcd7b26f5aa3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BRIGADA_SOLIDARIA.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.v/bin/Activate.ps1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.v/bin/activate" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.v/bin/activate.csh" beforeDir="false" />
@@ -25,7 +18,6 @@
       <change beforePath="$PROJECT_DIR$/.v/bin/python3.12" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.v/lib64" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.v/pyvenv.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/database-client-config.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/API/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +75,7 @@
       <workItem from="1731243166283" duration="223000" />
       <workItem from="1731243516304" duration="1195000" />
       <workItem from="1731246477245" duration="2665000" />
-      <workItem from="1731251341277" duration="5484000" />
+      <workItem from="1731251341277" duration="7187000" />
     </task>
     <servers />
   </component>
