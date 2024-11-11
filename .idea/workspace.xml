@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed27476a-d7d7-427f-bc08-fcd7b26f5aa3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.v/bin/Activate.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.v/bin/activate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.v/bin/activate.csh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.v/bin/activate.fish" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.v/bin/pip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.v/bin/pip3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.v/bin/pip3.12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.v/bin/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.v/bin/python3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.v/bin/python3.12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.v/lib64" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.v/pyvenv.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +62,7 @@
       <workItem from="1731243166283" duration="223000" />
       <workItem from="1731243516304" duration="1195000" />
       <workItem from="1731246477245" duration="2665000" />
-      <workItem from="1731251341277" duration="7187000" />
+      <workItem from="1731251341277" duration="11406000" />
     </task>
     <servers />
   </component>
