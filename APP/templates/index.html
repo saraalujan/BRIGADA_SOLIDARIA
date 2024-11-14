@@ -1,79 +1,18 @@
+{% extends "base.html" %}
 
-<!-- <!DOCTYPE html>
-<html class="no-js"> 
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Beam &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
-
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	<link rel="shortcut icon" href="favicon.ico">
-
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+{% block title %}Inicio -- Brigada Solidaria{% endblock %}
 	
-	Animate.css 
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
-	Icomoon Icon Fonts
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
-	Bootstrap  
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
-	 Superfish
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/superfish.css') }}">
-	 Flexslider  
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}">
-
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-
-	Modernizr JS 
-	<script src="{{ url_for('static', 'js/modernizr-2.6.2.min.js') }}"></script>
-	
-	</head> -->
-	{% extends "base.html" %}
-
-	{% block title %}Inicio -- Brigada Solidaria{% endblock %}
-	<!-- <body>
-		<div id="fh5co-wrapper">
-		<div id="fh5co-page">
-		<div id="fh5co-header">
-			<header id="fh5co-header-section">
-				<div class="container">
-					<div class="nav-header">
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="{{ url_for('index.html') }}"><i class="icon-home2"></i>Brigada Solidaria</a></h1>
-						<nav id="fh5co-menu-wrap" role="navigation">
-							<ul class="sf-menu" id="fh5co-primary-menu"> -->
 {% block menu %}
 								<li>
-									<a class="active" href="{{ url_for('index.html') }}">Inicio</a>
+									<a class="active" href="{{ url_for('index') }}">Inicio</a>
 								</li>
-								<li><a href="{{ url_for('centros.html') }}">Centros</a></li>
-								<li><a href="{{ url_for('estadisticas.html') }}" class="fh5co-sub-ddown">Estadisticas</a></li>
-								<li><a href="{{ url_for('sobre_nosotros.html') }}">Sobre nosotros</a></li>
-								<li><a href="{{ url_for('nuevos_centros.html') }}">Nuevos centros</a></li>
+								<li><a href="{{ url_for('centros') }}">Centros</a></li>
+								<li><a href="{{ url_for('estadisticas') }}" class="fh5co-sub-ddown">Estadisticas</a></li>
+								<li><a href="{{ url_for('sobre_nosotros') }}">Sobre nosotros</a></li>
+								<li><a href="{{ url_for('nuevos_centros') }}">Nuevos centros</a></li>
 {% endblock %}
-							<!--</ul>
-						</nav>
-					</div>
-				</div>
-			</header>		
-		</div>-->
-		<!-- end:fh5co-header -->
-		{% block content %}
+							
+{% block content %}
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
@@ -95,7 +34,7 @@
 		</aside>
 		<div id="fh5co-section">
 			<div class="grid-project-section">
-				<a href="{{ url_for('centros.html') }}">
+				<a href="{{ url_for('centros') }}">
 					<img src="{{ url_for('images', filename='centros.webp')}}" alt="Project" class="img-responsive">
 					<div class="desc text-center">
 						<h2>Centros</h2>
@@ -111,7 +50,7 @@
 				</a>
 			</div>
 			<div class="grid-project-section">
-				<a href="{{ url_for('nuevos_centros.html') }}">
+				<a href="{{ url_for('nuevos_centros') }}">
 					<img src="{{ url_for('images', filename='nuevo_centro.webp')}}" alt="Project" class="img-responsive">
 					<div class="desc text-center">
 						<h2>Añadir centro</h2>
@@ -119,23 +58,7 @@
 				</a>
 			</div>
 		</div>
-		{% endblock %}
-
-		<!-- <footer>
-			<div id="footer">
-				<div class="container">
-		
-					<div class="row copy-right">
-						<div class="col-md-6 col-md-offset-3 text-center">
-
-							<p>&copy; 2024 IDS <a href="#">Brigada Solidaria</a>.Todos los derechos reservados. <br>Hecho con<i class="icon-heart3"></i> by <p>estudiantes de Ingenieria</p>/ Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer> -->
-	
-
+{% endblock %}
 
 	
 {% block script %}
@@ -156,6 +79,4 @@
 	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 {% endblock %}
-	
-<!-- </body>
-</html> -->
+

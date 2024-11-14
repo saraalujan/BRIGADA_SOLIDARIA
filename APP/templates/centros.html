@@ -1,78 +1,17 @@
-<!-- <!DOCTYPE html>
-<html class="no-js"> 
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Brigada Solidaria &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Pagina oficial Brigada Solidaria" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="Brigada Solidaria" />
-
-
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	
-	<link rel="shortcut icon" href="favicon.ico">
-
-	<link href='https://fonts.googleapis.com/static/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/static/css'>
-	<link href="https://fonts.googleapis.com/static/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
-	
-	
-	<link rel="stylesheet" href="{{ url_for('static', filename = '/css/animate.static/css)' }}">
-
-	<link rel="stylesheet" href="{{ url_for('static', filename = '/css/icomoon.static/css)' }}">
-
-	<link rel="stylesheet" href="{{ url_for('static', filename = '/css/bootstrap.static/css)' }}">
-
-	<link rel="stylesheet" href="{{ url_for('static', filename = '/css/superfish.static/css)' }}">
-
-	<link rel="stylesheet" href="{{ url_for('static', filename = '/css/flexslider.static/css)' }}">
-
-	<link rel="stylesheet" href="{{ url_for('static', filename = '/css/style.static/css)' }}">
-
-
-	<script src="{{ url_for('static', '/js/modernizr-2.6.2.min.js') }}"></script>
-	
-	</head>-->
 	{% extends "base.html" %}
 
 	{% block title %}Centros -- Brigada Solidaria{% endblock %}
-	<!--<body>
-		<div id="fh5co-wrapper">
-		<div id="fh5co-page">
-		<div id="fh5co-header">
-			<header id="fh5co-header-section"> 
-				<div class="container">
-					<div class="nav-header">
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="{{url_for(index.html)}}"><i class="icon-home2"></i>Beam</a></h1>
-						<! START #fh5co-menu-wrap -
-						<nav id="fh5co-menu-wrap" role="navigation">
-							<ul class="sf-menu" id="fh5co-primary-menu"> -->
-								{% block menu %}
+	
+	{% block menu %}
 								<li>
-									<a href="{{url_for('index.html')}}">Inicio</a>
+									<a href="{{ url_for('index')}}">Inicio</a>
 								</li>
-								<li><a class="active" href="{{url_for('centros.html')}}">Centros</a></li>
-								<li><a href="{{url_for('estadisticas.html) '}}" class="fh5co-sub-ddown">Estadisticas</a></li>
-								<li><a href="{{url_for('sobre_nosotros.html')}}">Sobre nosotros</a></li>
-								<li><a href="{{url_for('nuevos_centros.html')}}">Nuevos centros</a></li>
-								{% endblock %}
-							<!--</ul>
-						</nav>
-					</div>
-				</div>
-			</header>		
-		</div>-->
+								<li><a class="active" href="{{url_for('centros')}}">Centros</a></li>
+								<li><a href="{{url_for('estadisticas') }}" class="fh5co-sub-ddown">Estadisticas</a></li>
+								<li><a href="{{url_for('sobre_nosotros')}}">Sobre nosotros</a></li>
+								<li><a href="{{url_for('nuevos_centros')}}">Nuevos centros</a></li>
+{% endblock %}
+							
 
 {% block main %}
 		<aside id="fh5co-hero" class="js-fullheight">
@@ -96,7 +35,7 @@
 				<div class="row">
 					<div class="col-md-4 text-center project">
 						<a href="#" class="grid-project">
-							<div class="image"><img src="images/project-4.jpg" alt="Project" class="img-responsive"></div>
+							<div class="image"><img src="{{ url_for('static', filename='images/project-4.jpg') }}" alt="Project" class="img-responsive"></div>
 							<div class="desc">
 								<h3>Puentes de esperanza</h3>
 								<span>50 personas por noche</span>
@@ -105,7 +44,7 @@
 					</div>
 					<div class="col-md-4 text-center project">
 						<a href="#" class="grid-project">
-							<div class="image"><img src="images/project-5.jpg" alt="Project" class="img-responsive"></div>
+							<div class="image"><img src="{{ url_for('static', filename='images/project-5.jpg') }}" alt="Project" class="img-responsive"></div>
 							<div class="desc">
 								<h3>Refugio renace</h3>
 								<span>60 personas por noche</span>
@@ -114,7 +53,7 @@
 					</div>
 					<div class="col-md-4 text-center project">
 						<a href="#" class="grid-project">
-							<div class="image"><img src="images/project-6.jpg" alt="Project" class="img-responsive"></div>
+							<div class="image"><img src="{{ url_for('static', filename='images/project-6.jpg') }}" alt="Project" class="img-responsive"></div>
 							<div class="desc">
 								<h3>Mano en camino</h3>
 								<span>55 personas por noche</span>
@@ -124,32 +63,10 @@
 				</div>
 			</div>
 		</div>
-
 {% endblock %}
 
-		<!--<footer>
-			<div id="footer">
-				<div class="container">
-					
-					<div class="row copy-right">
-						<div class="col-md-6 col-md-offset-3 text-center">
-							<p>&copy; 2016 Free Html5 <a href="#">Beam</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a></p>
-								<a href="#">Brigada Solidaria</a>. All Rights Reserved.
-								<br>Made with <i class="icon-heart3"></i> por el equipo <a href="https://brigadasolidaria.com" target="_blank">Brigada Solidaria</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	
 
-	</div>
-	
-
-	</div>-->
-	
-
-	{% block script %}
+{% block script %}
 	<script src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
 	<!-- jQuery Easing -->
 	<script src="{{ url_for('static', filename = 'js/jquery.easing.1.3.js') }}"></script>
@@ -165,6 +82,6 @@
 
 	<!-- Main JS (Do not remove) -->
 	<script src="{{ url_for('static', filename = 'js/main.js') }}"></script>
-	{% endblock %}
+{% endblock %}
 	
 
