@@ -1,10 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js"> 
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{% block title %}Brigada Solidaria{% endblock %} </title>
-		<!--llego a completarlo-->
-	</head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{% block title %}Brigada Solidaria{% end block %}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
+
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+	
+	<link rel="shortcut icon" href="favicon.ico">
+	
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+		
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+	<!-- Superfish -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/superfish.css') }}">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}">
+	
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	
+	
+	<!-- Modernizr JS -->
+	<script src="{{ url_for('static', 'js/modernizr-2.6.2.min.js') }}"></script>
+		
+</head>
+<body>
+	<div id="fh5co-wrapper">
+		<div id="fh5co-page">
+		<div id="fh5co-header">
+			<header id="fh5co-header-section">
+				<div class="container">
+					<div class="nav-header">
+						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+						<h1 id="fh5co-logo"><a href="{{url_for ('index.html') }}"><i class="icon-home2"></i>Brigada Solidaria</a></h1>
+						<!-- START #fh5co-menu-wrap -->
+						<nav id="fh5co-menu-wrap" role="navigation">
+    						<ul class="sf-menu" id="fh5co-primary-menu">
+	<main>
+		{% block content %}
+
+		{% endblock %}
+	</main>
+
+		<footer>
+			<div id="footer">
+				<div class="container">
+					<div class="row copy-right">
+						<div class="col-md-6 col-md-offset-3 text-center">
+							</p><a href="#">Brigada Solidaria</a>. Todos los derechos reservados.<br>Hecho <i class="icon-heart3"></i> por el equipo <a href="https://brigadasolidaria.com" target="_blank">Brigada Solidaria</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	{% block script %}
+
+	{% endblock %}
+
+	</body>
+</html>
 	
 
