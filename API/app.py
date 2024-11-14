@@ -23,24 +23,26 @@ def todos_los_centros():
 
     return jsonify(response), 200
 
-@app.route('/api/v1/centros',methods=['POST'])
+@app.route('/api/v1/anadircentros',methods=['POST'])
 def anadir_centro():
     data = request.get_json()
 
-    keys = ('nombre','comuna','direccion','capacidad','direccion','contacto')
+    keys = ('nombre','comuna','direccion','capacidad','instalaciones','contacto')
     for key in keys:
         if key not in data:
-            return jsonify({'error':'Falta el dato {key}'}), 400
+            return jsonify({'error':f'Falta el dato {key}'}), 400
         
     try:
-        centros.anadir_centro(data), 201
+        centros.anadir_centro(data)
     except Exception as e:
         return jsonify({'error':str(e)}), 500
     
-@app.route('/api/v1/centros/buscar', methods=['GET'])
-def buscar_centro():
+    return jsonify(data), 201
+    
+@app.route('/api/v1/centros/comuna/<int:comuna>', methods=['GET'])
+def por_comuna(comuna):
     try:
-        result = centros.buscar_centro(request.args)
+        result = centros.por_comuna(comuna)
     except Exception as e:
         return jsonify({'error':str(e)}), 500
     response = []
@@ -54,6 +56,56 @@ def buscar_centro():
 
     return jsonify(response), 200
 
+@app.route('/api/v1/centros/nombre/<string:nombre>', methods=['GET'])
+def por_nombre(nombre):
+    try:
+        result = centros.por_nombre(nombre)
+    except Exception as e:
+        return jsonify({'error':str(e)}), 500
+    response = []
+    for row in result:
+        response.append({'nombre': row[0],
+        'comuna' : row[1] , 
+        'direccion' : row[2] , 
+        'capacidad' : row[3] , 
+        'instalaciones' : row[4] , 
+        'contacto' : row[5]})
+
+    return jsonify(response), 200
+
+@app.route('/api/v1/centros/capacidad/<int:capacidad>', methods=['GET'])
+def por_capacidad(capacidad):
+    try:
+        result = centros.por_capacidad(capacidad)
+    except Exception as e:
+        return jsonify({'error':str(e)}), 500
+    response = []
+    for row in result:
+        response.append({'nombre': row[0],
+        'comuna' : row[1] , 
+        'direccion' : row[2] , 
+        'capacidad' : row[3] , 
+        'instalaciones' : row[4] , 
+        'contacto' : row[5]})
+
+    return jsonify(response), 200
+
+@app.route('/api/v1/centros/<string:direccion>', methods=['GET'])
+def por_direccion(direccion):
+    try:
+        result = centros.por_direccion(direccion)
+    except Exception as e:
+        return jsonify({'error':str(e)}), 500
+    response = []
+    for row in result:
+        response.append({'nombre': row[0],
+        'comuna' : row[1] , 
+        'direccion' : row[2] , 
+        'capacidad' : row[3] , 
+        'instalaciones' : row[4] , 
+        'contacto' : row[5]})
+
+    return jsonify(response), 200
 
 
 if __name__=='__main__':
