@@ -57,7 +57,7 @@
 						<h1 id="fh5co-logo"><a href="{{ url_for('index.html') }}"><i class="icon-home2"></i>Brigada Solidaria</a></h1>
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu"> -->
-								{% block menu %}
+{% block menu %}
 								<li>
 									<a class="active" href="{{ url_for('index.html') }}">Inicio</a>
 								</li>
@@ -65,7 +65,7 @@
 								<li><a href="{{ url_for('estadisticas.html') }}" class="fh5co-sub-ddown">Estadisticas</a></li>
 								<li><a href="{{ url_for('sobre_nosotros.html') }}">Sobre nosotros</a></li>
 								<li><a href="{{ url_for('nuevos_centros.html') }}">Nuevos centros</a></li>
-								{% endblock %}
+{% endblock %}
 							<!--</ul>
 						</nav>
 					</div>
@@ -77,7 +77,7 @@
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url('{{url_for('static', filename = images/portada.jpg') }} ');">
+			   	<li style="background-image: url('portada.jpg');">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
 			   			<div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
@@ -136,10 +136,7 @@
 		</footer> -->
 	
 
-	</div>
-	<!-- END fh5co-page -->
 
-	</div>
 	
 {% block script %}
 	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
