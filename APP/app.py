@@ -12,7 +12,7 @@ def nuevos_centros():
 
 @app.route("/")
 def index():
-    return render_template("index")
+    return render_template("index.html")
 
 @app.route("/estadisticas")
 def estadisticas():
