@@ -1,67 +1,8 @@
+{% extends "base.html" %}
 
-<!-- <!DOCTYPE html>
-<html class="no-js"> 
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Brigada Solidaria</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
+{% block title %}Nuevos Centros - Brigada Solidaria{% endblock %}
 
-	<meta property="og:title" content="Brigada Solidaria"/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content="Brigada Solidaria"/>
-	<meta property="og:description" content="Un sitio web que busca ayudar a las personas con más necesidades."/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	
-	<link rel="shortcut icon" href="{{ url_for('static', filename = favicon.ico')}}">
-
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
-	
-	
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
-	<
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
-	
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
-	
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/superfish.css') }}">
-	
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}">
-
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-
-	
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	
-
-	</head>
-	<body>
-		<div id="fh5co-wrapper">
-		<div id="fh5co-page">
-		<div id="fh5co-header">
-			<header id="fh5co-header-section">
-				<div class="container">
-					<div class="nav-header">
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="{{url_for ('index.html') }}"><i class="icon-home2"></i>Brigada Solidaria</a></h1>
-						<START #fh5co-menu-wrap ->
-						<nav id="fh5co-menu-wrap" role="navigation">
-    						<ul class="sf-menu" id="fh5co-primary-menu"> -->
-       			 			   <li></li><a href="{{ url_for('index') }}">Inicio</a></li>
-    				 		   <li><a href="{{ url_for('centros') }}">Centro</a></li>
-     						   <li><a href="{{ url_for('sobre_nosotros') }}">Sobre nosotros</a></li>
-     						   <li><a href="{{ url_for('nuevos_centros') }}">Nuevos centros</a></li>
-					    	</ul>
+{% block content %}
 								<li><a href="{{url_for('estadisticas')}}" class="fh5co-sub-ddown">Estadisticas</a></li>
 								<li><a href="{{url_for('sobre_nosotros')}}">Sobre nosotros</a></li>
 								<li><a class="active" href="{{url_for('nuevos_centros')}}">Nuevos centros</a></li>
@@ -80,7 +21,7 @@
 			   		<div class="container">
 			   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 			   				<div class="slider-text-inner desc">
-			   					<h2 class="heading-section">Nuevos centros Us</h2>
+			   					<h2 class="heading-section">Nuevos Centros</h2>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -143,7 +84,7 @@
 							
 							<p>&copy; Copyright 2016 Free Html5 
 								<a href="#">Brigada Solidaria</a>. All Rights Reserved.
-								<br>Made with <i class="icon-heart3"></i> por el equipo <a href="https://brigadasolidaria.com" target="_blank">Brigada Solidaria</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a></p>
+								<br>Hecho<i class="icon-heart3"></i> por el equipo <a href="https://brigadasolidaria.com" target="_blank">Brigada Solidaria</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a></p>
 						</div>
 					</div>
 				</div>
