@@ -2,16 +2,17 @@
 
 {% block title %}Nuevos Centros - Brigada Solidaria{% endblock %}
 
+{% block menu %}
+<li>
+	<a href="{{url_for('index')}}">Inicio</a>
+</li>
+<li><a href="{{url_for('centros')}}">Centros</a></li>
+<li><a href="{{url_for('estadisticas) '}}" class="fh5co-sub-ddown">Estadisticas</a></li>
+<li><a href="{{url_for('sobre_nosotros')}}">Sobre nosotros</a></li>
+<li><a class="active" href="{{url_for('nuevos_centros')}}">Nuevos centros</a></li>
+{% endblock %}
+
 {% block content %}
-								<li><a href="{{url_for('estadisticas')}}" class="fh5co-sub-ddown">Estadisticas</a></li>
-								<li><a href="{{url_for('sobre_nosotros')}}">Sobre nosotros</a></li>
-								<li><a class="active" href="{{url_for('nuevos_centros')}}">Nuevos centros</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</header>		
-		</div>
 		<!-- end:fh5co-header -->
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
@@ -75,7 +76,9 @@
 		</div>
 		<!-- END fh5co-contact -->
 	</div>
-		<footer>
+{% endblock %}
+
+		<!-- <footer>
 			<div id="footer">
 				<div class="container">
 					
@@ -93,13 +96,14 @@
 	
 
 	</div>
-	<!-- END fh5co-page -->
+	<! END fh5co-page ->
 
 	</div>
-	<!-- END fh5co-wrapper -->
+	<! END fh5co-wrapper ->
 
-	<!-- jQuery -->
+	<!- jQuery ->-->
 
+{% block script %}
 
 	<script src="{{url_for('static', filename = 'js/jquery.min.js')}}"></script>
 	<!-- jQuery Easing -->
@@ -120,6 +124,8 @@
 	<!-- Main JS (Do not remove) -->
 	<script src="{{url_for('static', filename = 'js/main.js')}}"></script>
 
-	</body>
-</html>
+{% endblock %}
+
+	<!-- </body>
+</html>-->
 
