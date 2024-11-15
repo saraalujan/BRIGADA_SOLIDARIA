@@ -26,6 +26,7 @@ body {
 }
 
 .slider-bg {
+  background-image: url('/static/images/portada.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh; /* Ocupa toda la altura de la pantalla */
