@@ -7,7 +7,7 @@
 									<a href="{{ url_for('index') }}">Inicio</a>
 								</li>
 								<li><a href="{{url_for('centros')}}">Centros</a></li>
-								<li><a href="{{url_for('estadisticas) '}}" class="fh5co-sub-ddown">Estadisticas</a></li>
+								<li><a href="{{url_for('buscar_centros') }}" class="fh5co-sub-ddown">Buscar centros</a></li>
 								<li><a href="{{url_for('sobre_nosotros')}}">Sobre nosotros</a></li>
 								<li><a class="active" href="{{url_for('nuevos_centros')}}">Nuevos centros</a></li>
 {% endblock %}
@@ -17,7 +17,8 @@
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-				<div style="background-image: url('{{url_for('static', filename = images/portada.jpg')}}');"></div>
+				<li>
+				<div (style="background-image: url('{{url_for('static', filename = '/portada.jpg')}}');")></div>
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
 			   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
