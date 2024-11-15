@@ -11,11 +11,12 @@
 *	Edit this section
 *
 * ======================================================= */
+
 body {
   font-family: "Roboto", Arial, serif;
   line-height: 1.8;
   font-size: 16px;
-  background: #fff;
+  background-image: url('/static/images/portada.jpg');
   color: #848484;
   font-weight: 300;
   overflow-x: hidden;
