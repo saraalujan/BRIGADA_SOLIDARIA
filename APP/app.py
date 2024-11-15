@@ -14,9 +14,9 @@ def nuevos_centros():
 def index():
     return render_template("index.html")
 
-@app.route("/estadisticas")
-def estadisticas():
-    return render_template("estadisticas.html")
+@app.route("/buscar_centros")
+def buscar_centros():
+    return render_template("buscar_centros.html")
 
 @app.route("/centros")
 def centros():
