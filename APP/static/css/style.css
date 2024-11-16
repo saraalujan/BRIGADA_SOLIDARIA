@@ -496,18 +496,22 @@ figure {
   text-transform: uppercase;
   font-weight: 700;
   float: left;
-  margin-bottom: 0;
-  margin-top: 1.2em;
+  margin-bottom: auto;
+  margin-top: 0.4em;
 }
-#fh5co-logo a {
+#fh5co-logo img {
   color: rgba(0, 0, 0, 0.9);
+  width:50px;
+  height:auto;
+  display:block;
+  margin:0 auto;
 }
-#fh5co-logo a i {
+#fh5co-logo img h3 {
   color: #FA7E0A;
   font-size: 30px;
   padding-right: 12px;
 }
-#fh5co-logo a:hover, #fh5co-logo a:focus {
+#fh5co-logo img:hover, #fh5co-logo img:focus {
   color: rgba(0, 0, 0, 0.9) !important;
 }
 #fh5co-logo span {
