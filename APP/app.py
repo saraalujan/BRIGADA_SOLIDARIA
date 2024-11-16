@@ -1,4 +1,7 @@
-from flask import Flask,render_template,url_for,request,redirect
+from flask import Flask,render_template
+import requests
+
+API_URL = 'http://root:1234@localhost:5000/api/v1/'
 
 app = Flask(__name__)
 
