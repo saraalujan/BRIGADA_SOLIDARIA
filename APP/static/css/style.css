@@ -465,7 +465,7 @@ figure {
 }
 
 #fh5co-header-section {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgb(219, 215, 207);
   position: absolute;
   top: 40px;
   left: 0;
@@ -497,17 +497,25 @@ figure {
   font-weight: 700;
   float: left;
   margin-bottom: 0;
-  margin-top: 1.2em;
+  margin-top: 1.05em;
   display:flex;
   align-items:center;
+  justify-content: flex-start;
 }
+
+#fh5co-logo a {
+  display: flex;
+  align-items: center; /* Alinea la imagen y el texto */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
 #fh5co-logo img {
-  color: rgba(0, 0, 0, 0.9);
-  width:50px;
-  height:auto;
-  display:block;
-  margin:0 auto;
+  width: 70px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+  vertical-align: middle;
 }
+
 #fh5co-logo img h3 {
   color: #FA7E0A;
   font-size: 30px;
@@ -519,18 +527,14 @@ figure {
   vertical-align: middle;
 }
 
-#fh5co-logo span {
-  padding: 0;
-  margin: 0;
-  font-weight: bold;
-  font-size:24px;
-}
+
 
 #fh5co-logo h3 {
   margin: 0; /* Elimina márgenes innecesarios */
   padding: 0; /* Elimina el padding para que no haya espacio adicional */
-  font-weight: 100;
-  color: #000; /* Asegura que el texto sea visible */
+  font-weight: 700;
+  color: #000; 
+  font-size:25px;
 }
 
 #fh5co-logo a:hover, #fh5co-logo a:focus {
