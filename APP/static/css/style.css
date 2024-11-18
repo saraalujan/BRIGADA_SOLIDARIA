@@ -37,6 +37,8 @@ body.fh5co-offcanvas {
   overflow: hidden;
 }
 
+
+
 a {
   color: #FA7E0A;
   -webkit-transition: 0.5s;
@@ -106,9 +108,9 @@ figure {
 }
 
 .btn-primary {
-  background: #FA7E0A;
+  background: #bd7942;
   color: #fff;
-  border: 2px solid #FA7E0A;
+  border: 2px solid #bd7942;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #fb8b23 !important;
@@ -120,7 +122,7 @@ figure {
   border: 2px solid #FA7E0A;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #FA7E0A;
+  background: #80370a;
   color: #fff;
 }
 
@@ -695,7 +697,7 @@ figure {
   display: none;
 }
 #fh5co-hero .flexslider .flex-control-nav li a {
-  background: rgba(255, 255, 255, 0.2);
+  background: white;
   box-shadow: none;
   width: 12px;
   height: 12px;
@@ -797,9 +799,47 @@ figure {
 
 #fh5co-work-section, #fh5co-services-section,
 #fh5co-team-section, #fh5co-contact-section {
-  padding: 7em 0;
+  padding: 5em 0;
   justify-content: center;
 }
+
+#fh5co-services-section {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Organiza los formularios en columna */
+  margin-left:6.4em;
+}
+
+.services-inner {
+  margin-bottom: 20px; /* Espaciado entre formularios */
+  background-color: #f9f9f9; /* Fondo claro para destacar */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar los formularios */
+  border-radius: 10px;
+}
+
+.services-inner input {
+  margin: 10px 0; /* Espaciado alrededor del campo de entrada */
+  padding: 10px; /* Espaciado interno */
+  width: 100%; /* Ocupa todo el ancho disponible dentro de su contenedor */
+  max-width: 300px; /* Ancho máximo del campo de entrada */
+  box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+}
+
+.services-inner button {
+  padding: 10px 20px;
+  background-color: #bd7942; /* Color del botón */
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.services-inner button:hover {
+  background-color: #80370a; /* Color al pasar el mouse */
+}
+
 
 .grid-project {
   margin-bottom: 40px;
@@ -882,7 +922,15 @@ figure {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
 }
+
+#fh5co-section .grid-project-section:hover > a > img {
+  transform: scale(1.2); /* Incrementa el zoom al pasar el mouse */
+  filter: brightness(0.8); /* Oscurece ligeramente la imagen */
+}
+
 #fh5co-section .grid-project-section .desc {
   position: absolute;
   top: 0;
@@ -891,28 +939,44 @@ figure {
   right: 0;
   padding-top: 30%;
   z-index: 99;
+  padding: 40px 20px;
 }
+
 #fh5co-section .grid-project-section .desc h2 {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   color: #fff;
-  font-weight: 400;
-  font-size: 24px;
+  font-weight: 600;
+  font-size: 27px;
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  text-align: center;
 }
+
+#fh5co-section .grid-project-section:hover .desc h2 {
+  color: #ffffff; /* Color destacado al pasar el mouse */
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); /* Resplandor */
+}
+
 #fh5co-section .grid-project-section:after {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   content: '';
   z-index: 9;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
+
+#fh5co-section .grid-project-section .desc h2, 
+#fh5co-section .grid-project-section:after {
+  transition: all 0.4s ease; /* Uniformiza las transiciones */
+}
+
 #fh5co-section .grid-project-section:hover:after, #fh5co-section .grid-project-section:focus:after {
   background: rgba(0, 0, 0, 0.2);
 }
