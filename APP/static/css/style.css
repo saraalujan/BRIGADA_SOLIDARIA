@@ -496,15 +496,10 @@ figure {
   text-transform: uppercase;
   font-weight: 700;
   float: left;
-<<<<<<< HEAD
   margin-bottom: 0;
   margin-top: 1.2em;
   display:flex;
   align-items:center;
-=======
-  margin-bottom: auto;
-  margin-top: 0.4em;
->>>>>>> 848d717c6dbb4a6bcf4bcda410d40e0e14fbcfae
 }
 #fh5co-logo img {
   color: rgba(0, 0, 0, 0.9);
@@ -518,7 +513,6 @@ figure {
   font-size: 30px;
   padding-right: 12px;
 }
-<<<<<<< HEAD
 #fh5co-logo img{
   max-height: 45px;
   margin-right: 10px;
@@ -540,9 +534,6 @@ figure {
 }
 
 #fh5co-logo a:hover, #fh5co-logo a:focus {
-=======
-#fh5co-logo img:hover, #fh5co-logo img:focus {
->>>>>>> 848d717c6dbb4a6bcf4bcda410d40e0e14fbcfae
   color: rgba(0, 0, 0, 0.9) !important;
 }
 #fh5co-logo span {
