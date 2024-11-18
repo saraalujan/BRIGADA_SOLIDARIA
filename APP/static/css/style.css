@@ -796,9 +796,22 @@ figure {
 }
 
 #fh5co-work-section, #fh5co-services-section,
-#fh5co-team-section, #fh5co-contact-section {
+#fh5co-team-section {
   padding: 5em 0;
   justify-content: center;
+}
+
+#fh5co-contact-section{
+  padding: 5em 0;
+  justify-content: center;
+  background-color: #dbd7cf;
+}
+
+.contact-form {
+  padding: 30px;  /* Espaciado interno del formulario */
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  margin-top: 50px;  /* Separar el formulario de la parte superior */
 }
 
 #fh5co-services-section {
