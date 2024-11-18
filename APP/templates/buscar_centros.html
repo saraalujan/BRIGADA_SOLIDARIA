@@ -18,7 +18,11 @@
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
 				<li>
+<<<<<<< HEAD
 			   		<div class="overlay-gradient"></div>
+=======
+			   	<div class="overlay-gradient"></div>
+>>>>>>> 848d717c6dbb4a6bcf4bcda410d40e0e14fbcfae
 			   		<div class="container">
 			   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 			   				<div class="slider-text-inner desc">
@@ -34,39 +38,32 @@
 		<div id="fh5co-services-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4">
-						<div class="services-inner text-center">
-							<img src="{{ url_for('static', filename='images/b-engineer.svg') }}" alt="blueprint">
-							<h3>Voluntarios</h3>
-							<p>A lo largo de los centros que están adheridos en este proyecto encontramos a un total de 120 personas que colaboran para brindarle un refugio a las personas que lo necesitan.</p>
+					<div class="col-md-5 text-center">
+						<div class="services-inner">
+							<h3>Buscar por nombre:</h3>
+							<input type="text" placeholder="Nombre">
+							<button type="submit">Buscar</button>
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-5 text-center">
 						<div class="services-inner">
-							<img src="{{url_for('static', filename = 'images/b-compass.svg')}}" alt='blueprint'>
-							<h3>Personas asitidas</h3>
-							<p>En este ultimo mes contamos con una cantidad de 1.150 personas que han podido encontrar un lugar donde sentirse mejor.</p>
+							<h3>Buscar por capacidad:</h3>
+							<input type="text" placeholder="Capacidad">
+							<button type="submit">Buscar</button>
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-5 text-center">
 						<div class="services-inner">
-							<img src="{{url_for('static', filename = 'images/b-blueprint.svg')}}" alt='blueprint'>
-							<h3>Centros Activos</h3>
-							<p>Poseemos 5 centros a lo largo de la Ciudad de Buenos Aires, con el objetivo de que se adhieran más a medida que va pasando el tiempo.</p>
+							<h3>Buscar por direccion:</h3>
+							<input type="text" placeholder="Direccion">
+							<button type="submit">Buscar</button>
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-5 text-center">
 						<div class="services-inner">
-							<img src="{{url_for('static', filename = 'images/b-hammer.svg')}}" alt='blueprint'>
-							<h3>Centros Añadidos </h3>
-							<p>Gracias a la divulgación del sitio, se pudieron añadir en este ultimo mes dos centros. Esto permite que más personas puedan acceder a la información de un manera más inmediata.</p>
-						</div>
-					</div>
-					<div class="col-md-4 text-center">
-						<div class="services-inner">
-							<img src="{{url_for('static', filename = 'images/b-hotel.svg')}}" alt='blueprint'>
-							<h3>Personas Asistidas</h3>
-							<p>Logramos cumplir con aproximadamente 13.200 personas asistidas anualmente.</p>
+							 <h3>Buscar por comuna:</h3>
+							 <input type="text" placeholder="Comuna">
+							 <button type="submit">Buscar</button>
 						</div>
 					</div>
 				</div>
