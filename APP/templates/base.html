@@ -50,7 +50,12 @@
 					<div class="container">
 						<div class="nav-header">
 							<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-							<h1 id="fh5co-logo"><a href="{{ url_for('static', filename='index') }}"><i class="icon-home2"></i>Brigada Solidaria</a></h1>
+							<div id="fh5co-logo" >
+								<a href="{{ url_for('index') }}">
+								<img src="{{ url_for('static', filename='images/logo.ico') }}">
+								<h3>Brigada Solidaria</h3>
+								</a>
+							</div>
 							<!--START #fh5co-menu-wrap -->
 							<nav id="fh5co-menu-wrap" role="navigation">
 	    						<ul class="sf-menu" id="fh5co-primary-menu"> 
@@ -101,4 +106,3 @@
 </body>
 </html>
 	
-
