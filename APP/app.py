@@ -17,13 +17,41 @@ def nuevos_centros():
 def index():
     return render_template("index.html")
 
-@app.route("/buscar_centros")
-def buscar_centros():
-    return render_template("buscar_centros.html")
-
 @app.route("/centros")
 def centros():
-    return render_template("centros.html")
+    nombre = requests.args.get('nombre')
+    comuna = requests.args.get('comuna')
+    direccion = requests.args.get('direccion')
+    capacidad = requests.args.get('capacidad')
+
+    params = None
+
+    if nombre is not None:
+        params = {'nombre':nombre}
+        response = requests.get(API_URL+'/nombre',params=params)
+
+    if comuna is not None:
+        params = {'comuna':comuna}
+        response =requests.get(API_URL+'/comuna',params=params)
+
+    if direccion is not None:
+        params={'direccion':direccion}
+        response=requests.get(API_URL+'/direccion',params=params)
+
+    if capacidad is not None:
+        params={'capacidad':capacidad}
+        response=requests.get(API_URL+'/capacidad',params=params)
+
+    json_response=response.json()
+    centros=json_response.get("data",[])
+
+    print(centros)
+    
+    return render_template("formato_centros.html",centros=centros)
+
+@app.route("/buscar_centros")
+def centros():
+    return render_template("buscar_centros.html")
 
 if __name__=="__main__":
     app.run(debug=True,port=8080)
