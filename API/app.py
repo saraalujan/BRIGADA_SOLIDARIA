@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request
 
 import centros
-PORT=5001
 app = Flask(__name__)
 
 @app.route('/api/v1/centros',methods=['GET'])
@@ -109,4 +108,4 @@ def por_direccion(direccion):
 
 
 if __name__=='__main__':
-    app.run(debug=True,port=PORT)
+    app.run(debug=True)
