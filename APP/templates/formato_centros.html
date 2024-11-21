@@ -3,9 +3,7 @@
 {% block title %}Brigada Solidaria{% endblock %}
 
 {% block menu %}
-								<li>
-									<a href="{{ url_for('index') }}">Inicio</a>
-								</li>
+								<li><a href="{{ url_for('index') }}">Inicio</a></li>
 								<li><a href="{{ url_for('centros') }}">Centros</a></li>
 								<li><a href="{{ url_for('buscar_centros') }}">Buscar Centros</a></li>
 								<li><a href="{{ url_for('sobre_nosotros') }}">Sobre nosotros</a></li>
@@ -13,30 +11,18 @@
 {% endblock %}
 
 {% block content %}
-
+       <div id="fh5co-services-section">
+            <div class="container">
+                <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+                    <h2>Centros</h2>
+                    {% for centro in centros %}
+                        <p>Nombre:{{ centro.nombre }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div> 
 {% endblock %}
-        <h2>Centros</h2>
-        {{datos}}
-        <table>
-            <tr>
-                <tr>Nombre</tr>
-                <tr>Comuna</tr>
-                <tr>Direccion</tr>
-                <tr>Capacidad</tr>
-                <tr>Contacto</tr>
-                <tr>Instalaciones</tr>
-            </tr>
-            <tr>
-            {%for centro in centros%} 
-                <td>{{centro.nombre}}</td>
-                <td>{{centro.comuna}}</td>
-                <ts>{{centro.direccion}}</ts>
-                <ts>{{centro.capacidad}}</ts>
-                <ts>{{centro.contacto}}</ts>
-                <ts>{{centro.instalaciones}}</ts>
-            </tr>
-            {% endfor %}
-        </table>                         
+                               
 {% block script %}
 
 

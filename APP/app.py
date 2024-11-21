@@ -1,8 +1,8 @@
 from flask import Flask,render_template,request
-import pprint
+from pprint import pprint
 import requests
 
-API_URL = 'http://root:1234@localhost:5000/api/v1/'
+API_URL = 'http://root:1234@localhost:5000/api/v1/centros'
 
 app = Flask(__name__)
 
@@ -30,28 +30,29 @@ def formato_centros():
     capacidad = request.args.get('capacidad')
 
     params = None
+    response = None
 
     if nombre is not None:
-        params = {'nombre':nombre}
-        response = requests.get(API_URL+'/nombre',params=params)
+        params = nombre
+        response = requests.get(API_URL + '/nombre/' + params)
+    elif comuna is not None:
+        params = comuna
+        response = requests.get(API_URL + '/comuna/' + params)
+    elif direccion is not None:
+        params = direccion
+        response = requests.get(API_URL + '/direccion/' + params)
+    elif capacidad is not None:
+        params = capacidad
+        response = requests.get(API_URL + '/capacidad/' + params)
 
-    if comuna is not None:
-        params = {'comuna':comuna}
-        response =requests.get(API_URL+'/comuna',params=params)
+    if response is not None and response.status_code == 200:
+        json_response = response.json()
+        centros = json_response.get("centros", [])
+        pprint(centros)
+    else:
+        centros = []  
 
-    if direccion is not None:
-        params={'direccion':direccion}
-        response=requests.get(API_URL+'/direccion',params=params)
-
-    if capacidad is not None:
-        params={'capacidad':capacidad}
-        response=requests.get(API_URL+'/capacidad',params=params)
-
-    json_response=response.json()
-    centros=json_response.get()
-    pprint(centros)
-    
-    return render_template("formato_centros.html",centros=centros)
+    return render_template("formato_centros.html", centros=centros)
 
 @app.route("/buscar_centros")
 def buscar_centros():
