@@ -1,0 +1,42 @@
+[
+  {
+    "nombre": "Hogar Monsenor ALbisetti",
+    "comuna": 1,
+    "direccion": "Suipacha 1241",
+    "capacidad": 60,
+    "instalaciones": "Duchas y comida",
+    "contacto": 1143931423
+  },
+  {
+    "nombre": "Hogar Renacer Madres",
+    "comuna": 3,
+    "direccion": "Avenida Hipolito Yrigoyen 1924",
+    "capacidad": 24,
+    "instalaciones": "Camas, comida y servicios sociales",
+    "contacto": 1149519386
+  },
+  {
+    "nombre": "Hogar Refugio de Maria",
+    "comuna": 1,
+    "direccion": "Avenida Independencia 1151",
+    "capacidad": 50,
+    "instalaciones": "Duchas,comida y cama",
+    "contacto": 1143715869
+  },
+  {
+    "nombre": "Casa Heredia",
+    "comuna": 15,
+    "direccion": "Heredia 390",
+    "capacidad": 45,
+    "instalaciones": "Duchas y comida",
+    "contacto": 1127304588
+  },
+  {
+    "nombre": "Hogar Amparo Maternal",
+    "comuna": 13,
+    "direccion": "Ernesto A. Bavio 2816",
+    "capacidad": 30,
+    "instalaciones": "Duchas, servicios sociales, cama y comida",
+    "contacto": 1147825757
+  }
+]

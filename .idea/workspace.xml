@@ -7,9 +7,6 @@
     <list default="true" id="ed27476a-d7d7-427f-bc08-fcd7b26f5aa3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/APP/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/templates/buscar_centros.html" beforeDir="false" afterPath="$PROJECT_DIR$/APP/templates/buscar_centros.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/templates/nuevos_centros.html" beforeDir="false" afterPath="$PROJECT_DIR$/APP/templates/nuevos_centros.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +40,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "settings.editor.selected.configurable": "configurable.group.database.main",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
