@@ -16,7 +16,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/415fb1cd-32f2-44f8-8be0-c7df802adcb9.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/415fb1cd-32f2-44f8-8be0-c7df802adcb9/storage_v2/_src_/schema/IDS.mBoBAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/APP/static/js/mapa.js" beforeDir="false" afterPath="$PROJECT_DIR$/APP/static/js/mapa.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/API/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/app.py" afterDir="false" />
+>>>>>>> 69bb49ad3b02f595e6dfb461caa7997c37d5ce49
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

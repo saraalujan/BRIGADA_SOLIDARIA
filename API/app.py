@@ -33,26 +33,41 @@ def direcciones():
 
     for row in result:
         response.append({'direccion' : row[2] })
-        
-    return jsonify(response), 200
 
+    return jsonify(response), 200
 
 
 
 @app.route('/api/v1/anadircentros',methods=['GET','POST'])
 def anadir_centro():
-    nombre = request.args.get('nombre')
-    comuna = request.args.get('comuna')
-    direccion = request.args.get('direccion')
-    capacidad = request.args.get('capacidad')
-    contacto = request.args.get('contacto')
-    instalaciones = request.args.get('instalaciones')
+    if request.method == 'GET':
+        nombre = request.args.get('nombre')
+        comuna = request.args.get('comuna')
+        direccion = request.args.get('direccion')
+        capacidad = request.args.get('capacidad')
+        contacto = request.args.get('contacto')
+        instalaciones = request.args.get('instalaciones')
 
-    if nombre is None or comuna is None or direccion is None or capacidad is None or contacto is None or instalaciones is None:
-        return jsonify({"error":"Faltan datos"}), 400
+    # Si es una solicitud POST, obtenemos los parámetros del cuerpo (JSON)
+    elif request.method == 'POST':
+        centro = request.get_json()  
+        nombre = centro.get('nombre')
+        comuna = centro.get('comuna')
+        direccion = centro.get('direccion')
+        capacidad = centro.get('capacidad')
+        contacto = centro.get('contacto')
+        instalaciones = centro.get('instalaciones')
 
-    data = (nombre,comuna,direccion,capacidad,contacto,instalaciones)
-        
+    data = [{
+        'nombre': nombre,
+        'comuna': comuna,
+        'direccion': direccion,
+        'capacidad': capacidad,
+        'contacto': contacto,
+        'instalaciones': instalaciones
+    }]
+
+
     try:
         centros.anadir_centro(data)
     except Exception as e:
