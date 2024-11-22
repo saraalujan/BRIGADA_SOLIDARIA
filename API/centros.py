@@ -17,7 +17,7 @@ QUERY_POR_CAPACIDAD = "SELECT * FROM centros WHERE capacidad >= :capacidad"
 
 QUERY_POR_DIRECCION = "SELECT * FROM centros WHERE direccion = :direccion"
 
-QUERY_DIRECCIONES = "SELECT direccion FROM centros"
+QUERY_DIRECCIONES = "SELECT nombre, direccion FROM centros"
 
 def run_query(query,parameters=None):
     with engine.connect() as conn:
