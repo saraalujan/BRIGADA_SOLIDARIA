@@ -38,7 +38,7 @@ def anadir_centro():
     
     return jsonify(data), 201
     
-@app.route('/api/v1/centros/comuna/<int:comuna>', methods=['GET'])
+@app.route('/api/v1/centros/<int:comuna>', methods=['GET'])
 def por_comuna(comuna):
     try:
         result = centros.por_comuna(comuna)
@@ -55,7 +55,7 @@ def por_comuna(comuna):
 
     return jsonify(response), 200
 
-@app.route('/api/v1/centros/nombre/<string:nombre>', methods=['GET'])
+@app.route('/api/v1/centros/<string:nombre>', methods=['GET'])
 def por_nombre(nombre):
     try:
         result = centros.por_nombre(nombre)
@@ -72,7 +72,7 @@ def por_nombre(nombre):
 
     return jsonify(response), 200
 
-@app.route('/api/v1/centros/capacidad/<int:capacidad>', methods=['GET'])
+@app.route('/api/v1/centros/<int:capacidad>', methods=['GET'])
 def por_capacidad(capacidad):
     try:
         result = centros.por_capacidad(capacidad)

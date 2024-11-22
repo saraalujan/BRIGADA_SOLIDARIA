@@ -2,7 +2,7 @@ from flask import Flask,render_template,request
 from pprint import pprint
 import requests
 
-API_URL = 'http://root:1234@localhost:5000/api/v1/centros'
+API_URL = 'http://root:1234@localhost:5001/api/v1/centros'
 
 app = Flask(__name__)
 
@@ -30,25 +30,19 @@ def formato_centros():
     capacidad = request.args.get('capacidad')
 
     params = None
-    response = None
 
     if nombre is not None:
         params = nombre
-        response = requests.get(API_URL + '/nombre/' + params)
     elif comuna is not None:
-        params = comuna
-        response = requests.get(API_URL + '/comuna/' + params)
+        params = {'comuna':comuna}
     elif direccion is not None:
-        params = direccion
-        response = requests.get(API_URL + '/direccion/' + params)
+        params = {'direccion':direccion}
     elif capacidad is not None:
-        params = capacidad
-        response = requests.get(API_URL + '/capacidad/' + params)
-
+        params = {'capacidad':capacidad}
+    
+    response = requests.get(API_URL)
     if response is not None and response.status_code == 200:
-        json_response = response.json()
-        centros = json_response.get("centros", [])
-        pprint(centros)
+        centros=response.json()
     else:
         centros = []  
 
