@@ -1,5 +1,5 @@
 const mapa = document.getElementById('mapacentros');
-const map = L.map(mapa).setView([19.04, -98.187], 14);
+const map = L.map(mapa).setView([-34.60473, -58.38664], 14);
 
 
 
