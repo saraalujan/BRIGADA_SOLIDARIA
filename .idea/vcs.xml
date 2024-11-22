@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+<<<<<<< HEAD
+=======
     <mapping directory="$PROJECT_DIR$/normalizador-amba" vcs="Git" />
+>>>>>>> 69bb49ad3b02f595e6dfb461caa7997c37d5ce49
   </component>
 </project>
