@@ -22,6 +22,23 @@ def todos_los_centros():
 
     return jsonify(response), 200
 
+@app.route('/api/v1/centros/direcciones', methods=['GET'])
+def direcciones():
+    try:
+        result = centros.direcciones()
+    except Exception as e:
+        return jsonify({'error':str(e)}), 500
+
+    response = []
+
+    for row in result:
+        response.append({'direccion' : row[2] })
+        
+    return jsonify(response), 200
+
+
+
+
 @app.route('/api/v1/anadircentros',methods=['GET','POST'])
 def anadir_centro():
     nombre = request.args.get('nombre')
