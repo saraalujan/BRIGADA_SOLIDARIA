@@ -1,5 +1,4 @@
-from flask import Flask,render_template,request
-from pprint import pprint
+from flask import Flask,render_template,request,jsonify
 import requests
 
 API_URL = 'http://root:1234@localhost:5001/api/v1/centros'
@@ -29,18 +28,17 @@ def formato_centros():
     direccion = request.args.get('direccion')
     capacidad = request.args.get('capacidad')
 
-    params = None
-
+    url = API_URL
     if nombre is not None:
-        params = nombre
+        url =f"{API_URL}/nombre/{nombre}"
     elif comuna is not None:
-        params = {'comuna':comuna}
+        url =f"{API_URL}/comuna/{comuna}"
     elif direccion is not None:
-        params = {'direccion':direccion}
+        url =f"{API_URL}/direccion/{direccion}"
     elif capacidad is not None:
-        params = {'capacidad':capacidad}
+        url =f"{API_URL}/capacidad/{capacidad}"
     
-    response = requests.get(API_URL)
+    response = requests.get(url)
     if response is not None and response.status_code == 200:
         centros=response.json()
     else:

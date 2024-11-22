@@ -9,7 +9,7 @@
       <change beforePath="$PROJECT_DIR$/API/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/APP/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/templates/buscar_centros.html" beforeDir="false" afterPath="$PROJECT_DIR$/APP/templates/buscar_centros.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/templates/formato_centros.html" beforeDir="false" afterPath="$PROJECT_DIR$/APP/templates/formato_centros.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/templates/nuevos_centros.html" beforeDir="false" afterPath="$PROJECT_DIR$/APP/templates/nuevos_centros.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -33,36 +33,42 @@
 		</aside>
 		<div id="fh5co-contact-section">
 			<div class="container">
-				<form action="#" class="contact-form">
+				<form action="http://127.0.0.1:5001/api/v1/anadircentros" methods="POST" class="contact-form">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Nombre">
+										<label for="nombre"></label>
+										<input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Direccion">
+										<label for="direccion"></label>
+										<input type="text" name="direccion" class="form-control" placeholder="Direccion" required>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="int" class="form-control" placeholder="Comuna">
+										<label for="comuna"></label>
+										<input type="int" name="comuna" class="form-control" placeholder="Comuna" required>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="int" class="form-control" placeholder="Capacidad">
+										<label for="capacidad"></label>
+										<input type="int" name="capacidad" class="form-control" placeholder="Capacidad" required>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="int" class="form-control" placeholder="Contacto">
+										<label for="contacto"></label>
+										<input type="int" name="contacto" class="form-control" placeholder="Contacto" required>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Instalaciones"></textarea>
+										<label for="instalaciones"></label>
+										<textarea type="text" name="instalaciones" class="form-control" cols="30" rows="7" placeholder="Instalaciones" required></textarea>
 									</div>
 								</div>
 								<div class="col-md-12">

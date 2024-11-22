@@ -22,14 +22,19 @@ def todos_los_centros():
 
     return jsonify(response), 200
 
-@app.route('/api/v1/anadircentros',methods=['POST'])
+@app.route('/api/v1/anadircentros',methods=['GET','POST'])
 def anadir_centro():
-    data = request.get_json()
+    nombre = request.args.get('nombre')
+    comuna = request.args.get('comuna')
+    direccion = request.args.get('direccion')
+    capacidad = request.args.get('capacidad')
+    contacto = request.args.get('contacto')
+    instalaciones = request.args.get('instalaciones')
 
-    keys = ('nombre','comuna','direccion','capacidad','instalaciones','contacto')
-    for key in keys:
-        if key not in data:
-            return jsonify({'error':f'Falta el dato {key}'}), 400
+    if nombre is None or comuna is None or direccion is None or capacidad is None or contacto is None or instalaciones is None:
+        return jsonify({"error":"Faltan datos"}), 400
+
+    data = (nombre,comuna,direccion,capacidad,contacto,instalaciones)
         
     try:
         centros.anadir_centro(data)
@@ -38,7 +43,7 @@ def anadir_centro():
     
     return jsonify(data), 201
     
-@app.route('/api/v1/centros/<int:comuna>', methods=['GET'])
+@app.route('/api/v1/centros/comuna/<int:comuna>', methods=['GET'])
 def por_comuna(comuna):
     try:
         result = centros.por_comuna(comuna)
@@ -55,7 +60,7 @@ def por_comuna(comuna):
 
     return jsonify(response), 200
 
-@app.route('/api/v1/centros/<string:nombre>', methods=['GET'])
+@app.route('/api/v1/centros/nombre/<string:nombre>', methods=['GET'])
 def por_nombre(nombre):
     try:
         result = centros.por_nombre(nombre)
@@ -72,7 +77,7 @@ def por_nombre(nombre):
 
     return jsonify(response), 200
 
-@app.route('/api/v1/centros/<int:capacidad>', methods=['GET'])
+@app.route('/api/v1/centros/capacidad/<int:capacidad>', methods=['GET'])
 def por_capacidad(capacidad):
     try:
         result = centros.por_capacidad(capacidad)
@@ -89,7 +94,7 @@ def por_capacidad(capacidad):
 
     return jsonify(response), 200
 
-@app.route('/api/v1/centros/<string:direccion>', methods=['GET'])
+@app.route('/api/v1/centros/direccion/<string:direccion>', methods=['GET'])
 def por_direccion(direccion):
     try:
         result = centros.por_direccion(direccion)

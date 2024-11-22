@@ -46,27 +46,27 @@
 					<div class="col-md-5 text-center">
 						<div class="services-inner">
 							<form action="{{url_for('formato_centros')}}">
-								<h3>Buscar por capacidad:</h3>
-								<input type="text" id="capacidad" placeholder="Capacidad">
-								<button type="submit">Buscar</button>
+								<label for="capacidad">Buscar por capacidad:</label>
+								<input type="text" id="capacidad" name="capacidad" placeholder="Capacidad">
+								<input type="submit"value="Buscar">
 							</form>
 						</div>
 					</div>
 					<div class="col-md-5 text-center">
 						<div class="services-inner">
 							<form action="{{url_for('formato_centros')}}">
-								<h3>Buscar por dirección:</h3>
-								<input type="text" id="direccion" placeholder="Direccion">
-								<button type="submit">Buscar</button>
+								<label for="direccion">Buscar por direccion:</label>
+								<input type="text" id="direccion" name="direccion" placeholder="Direccion">
+								<input type="submit"value="Buscar">
 							</form>
 						</div>
 					</div>
 					<div class="col-md-5 text-center">
 						<div class="services-inner">
 							<form action="{{url_for('formato_centros')}}">
-								<h3>Buscar por comuna:</h3>
-								<input type="text" id="comuna" placeholder="Comuna">
-								<button type="submit">Buscar</button>
+								<label for="comuna">Buscar por comuna:</label>
+								<input type="text" id="comuna" name="comuna" placeholder="Comuna">
+								<input type="submit"value="Buscar">
 							</form>
 						</div>
 					</div>
