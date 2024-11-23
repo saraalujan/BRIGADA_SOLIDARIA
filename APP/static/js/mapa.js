@@ -26,7 +26,7 @@ $(document). ready(function(){
         direcciones.forEach(function(item){
             obtenerCoordenadas(item.direccion, function(lat, lon){
                 L.marker([lat, lon])
-                    .addTo(map)
+                    .addTo(mapa)
                     .bindPopup('<b>' + item.nombre + '</b><b>' + item.direccion);
             });
         });

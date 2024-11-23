@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, request
+import requests
 
 import centros
+
 app = Flask(__name__)
 
 @app.route('/api/v1/centros',methods=['GET'])
@@ -30,13 +32,14 @@ def direcciones():
         return jsonify({'error':str(e)}), 500
 
     response = []
-
     for row in result:
-        response.append({'direccion' : row[2] })
+        nombre, direccion = row
+        result.append({
+            'nombre': nombre,
+            'direccion': direccion
+        })
 
-    return jsonify(response), 200
-
-
+    return jsonify(response)
 
 @app.route('/api/v1/anadircentros',methods=['GET','POST'])
 def anadir_centro():

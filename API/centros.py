@@ -19,6 +19,8 @@ QUERY_POR_DIRECCION = "SELECT * FROM centros WHERE direccion = :direccion"
 
 QUERY_DIRECCIONES = "SELECT nombre, direccion FROM centros"
 
+QUERY__POINTER = "INSERT INTO casos (id, lat, lon) VALUES (:id, :lat, :lon)"
+
 def run_query(query,parameters=None):
     with engine.connect() as conn:
         result = conn.execute(text(query),parameters)
@@ -26,8 +28,11 @@ def run_query(query,parameters=None):
 
     return result
 
+def guardar_coordenadas(data):
+    return run_query(QUERY_POINTER, data)
+
 def direcciones():
-    return run_query(QUERY_DIRECCIONES,).fetchall()
+    return run_query(QUERY_DIRECCIONES).fetchall()
 
 def anadir_centro(data):
     run_query(QUERY_ANADIR_CENTRO, data)

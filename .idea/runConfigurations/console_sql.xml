@@ -1,6 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="console.sql" type="DatabaseScript" editBeforeRun="true" focusToolWindowBeforeRun="true" singleton="false" nameIsGenerated="true">
     <data-source id="415fb1cd-32f2-44f8-8be0-c7df802adcb9" namespace="schema/&quot;IDS&quot;" />
+    <data-source id="06ce648b-b87f-4b17-a63c-d14d40380447" />
     <method v="2" />
   </configuration>
 </component>
