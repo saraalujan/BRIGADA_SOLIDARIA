@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-import requests
+import requests 
 from flask_cors import CORS
 import centros
 
@@ -24,6 +24,45 @@ def todos_los_centros():
         'contacto' : row[5]})
 
     return jsonify(response), 200
+
+@app.route('/api/v1/casos', methods=['GET'])
+def casos():
+    try:
+        result = casos.casos()
+    except Exception as e:
+        return jsonify({'error':str(e)}), 500
+    
+    response = []
+
+    for row in result:
+        response.append({'lat': row[0],
+        'lon':row[1]})
+
+    return jsonify(response), 200
+
+@app.route('/api/v1/anadircaso', methods=['GET','POST'])
+def anadir_caso():
+    if request.method == 'GET':
+        lan = request.args.get('lat')
+        lon = request.args.get('lon')
+        
+    elif request.method == 'POST':
+        direccion = request.get_json()  
+        lat = casos.get('lat')
+        lon = casos.get('lon')
+
+    data = [{
+        'lat': lat,
+        'lon': lon
+    }]
+
+    try:
+        casos.anadir_caso(data)
+    except Exception as e:
+        return jsonify({'error':str(e)}), 500
+    
+    return jsonify(data), 201
+
 
 @app.route('/api/v1/centros/direcciones', methods=['GET'])
 def direcciones():
