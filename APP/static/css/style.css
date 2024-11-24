@@ -20,21 +20,63 @@ body {
   color: #848484;
   font-weight: 300;
   overflow-x: hidden;
+  padding: 0%;
 }
 .js-fullheight {
-  height: 100vh;
+  height: 105vh;
 }
 
 .slider-bg {
   background-image: url('/static/images/portada.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  height: 105vh;
   width: 100%;
 }
 
 body.fh5co-offcanvas {
   overflow: hidden;
+}
+
+form{
+  background-color: #f8f8f8;
+  padding:20px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 10px rgba(177, 94, 40, 0.445);
+  margin-bottom: 30px;
+}
+
+form label{
+  font-size: 16px;
+  font-weight: bold;
+  display:block;
+  margin-bottom:8px;
+  color:#181717c2;
+}
+
+form input[type="text"]{
+  width:100%;
+  padding:10px;
+  margin-bottom: 15px;
+  border:1px solid #ccc;
+  font-size:14px;
+  box-sizing: border-box;
+}
+
+form input[type="submit"]{
+  background-color: #b8915ed2;
+  color:black;
+  border:none;
+  padding:10px 20px;
+  border-radius: 2px;
+  font-size: 16px;
+  transition: background-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+form input[type="submit"]:hover{
+  background-color: #b8915ed2;
+  color:white;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
 }
 
 a {
@@ -684,7 +726,7 @@ figure {
 #fh5co-hero .flexslider .slides .overlay-gradient {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: -14px;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.3);
@@ -938,8 +980,8 @@ figure {
 }
 
 #fh5co-section .grid-project-section:hover > a > img {
-  transform: scale(1.2); /* Incrementa el zoom al pasar el mouse */
-  filter: brightness(0.8); /* Oscurece ligeramente la imagen */
+  transform: scale(1.2);
+  filter: brightness(0.8); 
 }
 
 #fh5co-section .grid-project-section .desc {
@@ -965,13 +1007,13 @@ figure {
 }
 
 #fh5co-section .grid-project-section:hover .desc h2 {
-  color: #ffffff; /* Color destacado al pasar el mouse */
-  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); /* Resplandor */
+  color: #ffffff; 
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); 
 }
 
 #fh5co-section .grid-project-section:after {
   position: absolute;
-  top: 0;
+  top: 15px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -985,7 +1027,7 @@ figure {
 
 #fh5co-section .grid-project-section .desc h2, 
 #fh5co-section .grid-project-section:after {
-  transition: all 0.4s ease; /* Uniformiza las transiciones */
+  transition: all 0.4s ease; 
 }
 
 #fh5co-section .grid-project-section:hover:after, #fh5co-section .grid-project-section:focus:after {
@@ -1219,7 +1261,8 @@ figure {
   width: 100%;
   float: left;
   background: #222831;
-  padding: 7em 0 40px;
+  padding: 0px 0;
+  padding-bottom: 20px;
 }
 #footer p {
   color: rgba(255, 255, 255, 0.3);
