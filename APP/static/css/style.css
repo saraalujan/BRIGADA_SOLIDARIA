@@ -1606,9 +1606,8 @@ figure {
   background: url(../images/hourglass.svg) center no-repeat #222222;
 }
 
-#mapacentros {
-  height: 85vh;
-  width: 95%;
-  margin: 0 auto;
+#map {
+  height: 500px;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
