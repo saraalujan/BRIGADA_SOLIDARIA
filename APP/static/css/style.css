@@ -736,7 +736,7 @@ figure {
 #fh5co-hero .flexslider .slides .overlay-gradient {
   position: absolute;
   top: 0;
-  bottom: -14px;
+  bottom: -16px;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.3);
