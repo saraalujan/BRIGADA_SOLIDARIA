@@ -5,12 +5,11 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
 from kivy.uix.popup import Popup
 from kivy.core.window import Window
-
+from sqlalchemy import create_engine, text
 
 # Configurar tamaño y color de fondo de la ventana
 Window.size = (400, 600)
 Window.clearcolor = (0.95, 0.95, 0.95, 1)  # Fondo claro
-
 
 class FormularioScreen(BoxLayout):
     def __init__(self, **kwargs):
@@ -103,9 +102,12 @@ class FormularioScreen(BoxLayout):
                 self.mostrar_popup("Error", "La cantidad de menores debe ser un número válido.")
                 return
             
-            # Aquí procesarías los datos
-            print(f"Dirección: {direccion}, Adultos: {adultos}, Menores: {menores}")
-            self.mostrar_popup("Éxito", "Datos enviados correctamente.")
+            # Aquí procesarías los datos y los insertas en la base de datos
+            try:
+                self.insertar_datos_en_bd(direccion, adultos, menores)
+                self.mostrar_popup("Éxito", "Datos enviados y guardados correctamente.")
+            except Exception as e:
+                self.mostrar_popup("Error", f"Ocurrió un error al guardar los datos: {str(e)}")
 
     def mostrar_popup(self, titulo, mensaje):
         """Muestra un popup con un mensaje dado."""

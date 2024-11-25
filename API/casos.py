@@ -7,7 +7,7 @@ engine = create_engine("mysql://root:1234@localhost:3306/IDS")
 
 QUERY_ANADIR_CASO = "INSERT INTO casos (direccion, adultos, menores) VALUES (:direccion, :adultos, :menores)"
 
-QUERY_CASOS = "SELECT * FROM casos"
+QUERY_TODOS_LOS_CASOS = "SELECT * FROM casos"
 
 def run_query(query,parameters=None):
     with engine.connect() as conn:
@@ -20,4 +20,5 @@ def anadir_caso(data):
     run_query(QUERY_ANADIR_CASO, data)
 
 def casos():
-    run_query(QUERY_CASOS).fetchall()
+    result = run_query(QUERY_TODOS_LOS_CASOS).fetchall()
+    return result  

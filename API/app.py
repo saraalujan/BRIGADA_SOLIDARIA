@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import requests 
 from flask_cors import CORS
 import centros
@@ -27,43 +27,53 @@ def todos_los_centros():
     return jsonify(response), 200
 
 @app.route('/api/v1/casos', methods=['GET'])
-def casos():
+def todos_los_casos():
     try:
-        result = casos.casos()
-    except Exception as e:
-        return jsonify({'error':str(e)}), 500
-    
-    response = []
-
-    for row in result:
-        response.append({'direccion':row[0], 'adultos':row[1], 'menores':[2]})
-
-    return jsonify(response), 200
-
-@app.route('/api/v1/anadircaso', methods=['GET','POST'])
-def anadir_caso():
-    if request.method == 'GET':
-        lan = request.args.get('lat')
-        lon = request.args.get('lon')
+        result = casos.casos()  # Llamada a la función que obtiene los casos
+        print(result)  # Depuración: Imprime el resultado para ver si tiene datos
+        if not result:
+            return jsonify({"message": "No se encontraron casos."}), 404
         
+        response = []
+        for row in result:
+            response.append({
+                'direccion': row[0],  # Dependiendo del formato de tu resultado
+                'adultos': row[1],
+                'menores': row[2]
+            })
+        return jsonify(response), 200
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/v1/anadircaso',methods=['GET','POST'])
+def anadir_centro():
+    if request.method == 'GET':
+        direccion = request.args.get('direccion')
+        adultos = request.args.get('adultos')
+        menores = request.args.get('menores')
+
+    # Si es una solicitud POST, obtenemos los parámetros del cuerpo (JSON)
     elif request.method == 'POST':
-        direccion = request.get_json()  
-        lat = casos.get('lat')
-        lon = casos.get('lon')
+        casos = request.get_json()  
+        direccion = casos.get('direccion')
+        adultos = casos.get('adultos')
+        menores = casos.get('menores')
 
     data = [{
-        'lat': lat,
-        'lon': lon
+        'direccion': direccion,
+        'adultos': adultos,
+        'menores': menores
     }]
 
     try:
         casos.anadir_caso(data)
-    except Exception as e:
-        return jsonify({'error':str(e)}), 500
+    except:
+        return jsonify({'error':'error'}), 500
     
-    return jsonify(data), 201
-
-
+    return jsonify('excelente')
+    
 @app.route('/api/v1/centros/direcciones', methods=['GET'])
 def direcciones():
     try:
@@ -110,10 +120,10 @@ def anadir_centro():
 
     try:
         centros.anadir_centro(data)
-    except Exception as e:
-        return jsonify({'error':str(e)}), 500
+    except:
+        return jsonify({'error':'error'}), 500
     
-    return jsonify(data), 201
+    return render_template('nuevos_centros.html')
     
 @app.route('/api/v1/centros/comuna/<int:comuna>', methods=['GET'])
 def por_comuna(comuna):
