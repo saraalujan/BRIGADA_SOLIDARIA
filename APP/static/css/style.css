@@ -826,7 +826,7 @@ figure {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: rgba(250, 126, 10, 0.7);
+  background: rgba(219, 161, 107, 0.7);
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
   font-size: 30px;
@@ -972,9 +972,10 @@ figure {
   display: block;
 }
 #fh5co-section .grid-project-section {
+  position: relative;
+  
   width: 33.333333333%;
   float: left;
-  position: relative;
   overflow: hidden;
 }
 #fh5co-section .grid-project-section > a > img {
@@ -997,8 +998,11 @@ figure {
 
 #fh5co-section .grid-project-section .desc {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  text-align: center;
   bottom: 0;
   right: 0;
   padding-top: 30%;
@@ -1014,7 +1018,6 @@ figure {
   font-weight: 600;
   font-size: 27px;
   font-family: 'Roboto Slab', Arial, sans-serif;
-  text-align: center;
 }
 
 #fh5co-section .grid-project-section:hover .desc h2 {
@@ -1273,8 +1276,24 @@ figure {
   float: left;
   background: #222831;
   padding: 0px 0;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
+
+#footer .brigada{
+  color: #bd844ff5;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#footer .brigada:hover{
+  text-decoration: none;
+  color: #bd844ff5;
+  text-shadow: 0 0 10px #bd844ff5;
+}
+
+
 #footer p {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1375,11 +1394,8 @@ figure {
   color: rgba(255, 255, 255, 0.9) !important;
   background: #FA7E0A !important;
 }
-#footer .copy-right {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 5em;
-  margin-top: 5em;
-}
+
+
 #footer .copy-right p {
   color: rgba(255, 255, 255, 0.3);
   font-size: 16px;
@@ -1662,6 +1678,9 @@ figure {
 
 #map {
   height: 500px;
-  width: 100%;
+  width: 70%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 40px auto;
 }
 /*# sourceMappingURL=style.css.map */
