@@ -894,6 +894,41 @@ figure {
   flex-direction: column; /* Organiza los formularios en columna */
   margin-left:6.4em;
   gap:20px;
+  padding: 60px 0;
+  background-color: #f7f7f7;
+}
+
+.fh5co-heading h2{
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 45px;
+}
+
+.card-title{
+  font-size: 20px;
+  font-weight: bold;
+  color: #7e5424e1;
+}
+
+.card-body {
+  font-size:40px;
+  color:#555;
+}
+
+.card-text strong{
+  color:#83532bd0;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.card-text strong + span{
+  margin-left: 5px;
+}
+
+.card-text{
+  color: #333;
+  font-size: 20px;
 }
 
 .services-inner button{
