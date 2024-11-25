@@ -38,6 +38,15 @@ body.fh5co-offcanvas {
   overflow: hidden;
 }
 
+.img-small{
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+  display:block;
+  margin: 0 auto;
+
+}
+
 form{
   background-color: #f8f8f8;
   padding:20px;
@@ -54,7 +63,7 @@ form label{
   color:#181717c2;
 }
 
-form input[type="text"]{
+form input[type="text"], form input[type="int"]{
   width:100%;
   padding:10px;
   margin-bottom: 15px;
@@ -63,31 +72,32 @@ form input[type="text"]{
   box-sizing: border-box;
 }
 
-form input[type="submit"]{
-  background-color: #b8915ed2;
+form input[type="submit"], form button{
+  background-color: #d3c3b5d2;
   color:black;
   border:none;
   padding:10px 20px;
   border-radius: 2px;
   font-size: 16px;
-  transition: background-color 0.2s ease, text-shadow 0.2s ease;
+  transition: background-color 0.3s ease, text-shadow 0.2s ease;
 }
 
-form input[type="submit"]:hover{
+form input[type="submit"]:hover, form button:hover{
   background-color: #b8915ed2;
   color:white;
   text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
 }
 
 a {
-  color: #FA7E0A;
+  color: #bd844ff5;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover {
   text-decoration: none !important;
-  color: #FA7E0A !important;
+  color: #bd844ff5 !important;
+  text-shadow: 0 0 10px #bd844ff5;
 }
 
 p, ul, ol {
@@ -726,7 +736,7 @@ figure {
 #fh5co-hero .flexslider .slides .overlay-gradient {
   position: absolute;
   top: 0;
-  bottom: -14px;
+  bottom: -16px;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.3);
@@ -816,7 +826,7 @@ figure {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: rgba(250, 126, 10, 0.7);
+  background: rgba(219, 161, 107, 0.7);
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
   font-size: 30px;
@@ -852,8 +862,29 @@ figure {
 .contact-form {
   padding: 30px;  /* Espaciado interno del formulario */
   border-radius: 10px;  /* Bordes redondeados */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  background: #c4a486c4;
   margin-top: 50px;  /* Separar el formulario de la parte superior */
+  color:#4a4a4a;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.contact-form input, .contact-form textarea, .contact-form button{
+  width: 100%;
+  padding:10px;
+  border-radius: 5px;
+}
+
+.contact-form button{
+  padding: 30px;
+  border-radius: 10px;  
+  background-color: #ce926af3;
+  color:white;
+  border:none;
+  cursor:pointer;
+  transition: all 0.3s ease;
 }
 
 #fh5co-services-section {
@@ -862,37 +893,52 @@ figure {
   align-items: center; /* Centra verticalmente */
   flex-direction: column; /* Organiza los formularios en columna */
   margin-left:6.4em;
+  gap:20px;
+  padding: 60px 0;
+  background-color: #f7f7f7;
 }
 
-.services-inner {
-  margin-bottom: 20px; /* Espaciado entre formularios */
-  background-color: #f9f9f9; /* Fondo claro para destacar */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar los formularios */
-  border-radius: 10px;
+.fh5co-heading h2{
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 45px;
 }
 
-.services-inner input {
-  margin: 10px 0; /* Espaciado alrededor del campo de entrada */
-  padding: 10px; /* Espaciado interno */
-  width: 100%; /* Ocupa todo el ancho disponible dentro de su contenedor */
-  max-width: 300px; /* Ancho máximo del campo de entrada */
-  box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+.card-title{
+  font-size: 20px;
+  font-weight: bold;
+  color: #7e5424e1;
 }
 
-.services-inner button {
+.card-body {
+  font-size:40px;
+  color:#555;
+}
+
+.card-text strong{
+  color:#83532bd0;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.card-text strong + span{
+  margin-left: 5px;
+}
+
+.card-text{
+  color: #333;
+  font-size: 20px;
+}
+
+.services-inner button{
   padding: 10px 20px;
-  background-color: #bd7942; /* Color del botón */
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px; /* Bordes redondeados */
+  background-color: #cc946e;
+  color:white;
+  border:none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
-
-.services-inner button:hover {
-  background-color: #80370a; /* Color al pasar el mouse */
-}
-
 
 .grid-project {
   margin-bottom: 40px;
@@ -961,9 +1007,10 @@ figure {
   display: block;
 }
 #fh5co-section .grid-project-section {
+  position: relative;
+  
   width: 33.333333333%;
   float: left;
-  position: relative;
   overflow: hidden;
 }
 #fh5co-section .grid-project-section > a > img {
@@ -986,8 +1033,11 @@ figure {
 
 #fh5co-section .grid-project-section .desc {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  text-align: center;
   bottom: 0;
   right: 0;
   padding-top: 30%;
@@ -1003,7 +1053,6 @@ figure {
   font-weight: 600;
   font-size: 27px;
   font-family: 'Roboto Slab', Arial, sans-serif;
-  text-align: center;
 }
 
 #fh5co-section .grid-project-section:hover .desc h2 {
@@ -1262,8 +1311,24 @@ figure {
   float: left;
   background: #222831;
   padding: 0px 0;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
+
+#footer .brigada{
+  color: #bd844ff5;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#footer .brigada:hover{
+  text-decoration: none;
+  color: #bd844ff5;
+  text-shadow: 0 0 10px #bd844ff5;
+}
+
+
 #footer p {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1364,11 +1429,8 @@ figure {
   color: rgba(255, 255, 255, 0.9) !important;
   background: #FA7E0A !important;
 }
-#footer .copy-right {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 5em;
-  margin-top: 5em;
-}
+
+
 #footer .copy-right p {
   color: rgba(255, 255, 255, 0.3);
   font-size: 16px;
@@ -1651,6 +1713,9 @@ figure {
 
 #map {
   height: 500px;
-  width: 100%;
+  width: 70%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 40px auto;
 }
 /*# sourceMappingURL=style.css.map */
