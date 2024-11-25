@@ -158,9 +158,9 @@ figure {
 }
 
 .btn-primary {
-  background: #bd7942;
+  background: #B05B3B;
   color: #fff;
-  border: 2px solid #bd7942;
+  border: 2px solid #B05B3B;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #fb8b23 !important;
@@ -856,14 +856,14 @@ figure {
 #fh5co-contact-section{
   padding: 5em 0;
   justify-content: center;
-  background-color: #dbd7cf;
+  background-color: #F8EDE3;
 }
 
 .contact-form {
   padding: 30px;  /* Espaciado interno del formulario */
   border-radius: 10px;  /* Bordes redondeados */
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  background: #c4a486c4;
+  background: #753422;
   margin-top: 50px;  /* Separar el formulario de la parte superior */
   color:#4a4a4a;
   display:flex;
@@ -933,7 +933,7 @@ figure {
 
 .services-inner button{
   padding: 10px 20px;
-  background-color: #cc946e;
+  background-color: black;
   color:white;
   border:none;
   font-size: 1rem;
@@ -1268,6 +1268,7 @@ figure {
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
   border-radius: 0px;
+  background-color: #E8D0B3;
 }
 #fh5co-contact-section .form-control:focus, #fh5co-contact-section .form-control:active {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
