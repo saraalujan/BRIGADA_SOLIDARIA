@@ -158,7 +158,7 @@
 |root||root|localhost|grant option|G
 performance_schema|schema||mysql.session|localhost|SELECT|G
 sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
-      <ServerVersion>8.0.39</ServerVersion>
+      <ServerVersion>8.0.40</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_general_ci">
       <Charset>armscii8</Charset>
@@ -1072,7 +1072,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="IDS">
-      <LastIntrospectionLocalTimestamp>2024-11-23.13:56:42</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-11-25.18:36:33</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="293" parent="1" name="debian-sys-maint">
@@ -1105,17 +1105,17 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="300" parent="298" name="lon">
+    <column id="300" parent="298" name="direcion">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StoredType>double|0s</StoredType>
+      <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="301" parent="298" name="lat">
+    <column id="301" parent="298" name="adultos">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>double|0s</StoredType>
+      <StoredType>int|0s</StoredType>
     </column>
-    <column id="302" parent="298" name="id">
+    <column id="302" parent="298" name="menores">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>

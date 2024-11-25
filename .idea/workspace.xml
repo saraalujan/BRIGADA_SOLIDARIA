@@ -4,7 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed27476a-d7d7-427f-bc08-fcd7b26f5aa3" name="Changes" comment="" />
+    <list default="true" id="ed27476a-d7d7-427f-bc08-fcd7b26f5aa3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/hostpython3/.mark-Python-3.11.5.tgz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/hostpython3/Python-3.11.5.tgz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/kivy/.mark-2.3.0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/kivy/2.3.0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/libffi/.mark-v3.4.2.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/libffi/v3.4.2.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/openssl/.mark-openssl-1.1.1w.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/openssl/openssl-1.1.1w.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/pyjnius/.mark-1.6.1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/pyjnius/1.6.1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/python3/.mark-Python-3.11.5.tgz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/python3/Python-3.11.5.tgz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2/.mark-SDL2-2.28.5.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2/SDL2-2.28.5.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2_image/.mark-SDL2_image-2.8.0.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2_image/SDL2_image-2.8.0.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2_mixer/.mark-SDL2_mixer-2.6.3.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2_mixer/SDL2_mixer-2.6.3.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2_ttf/.mark-SDL2_ttf-2.20.2.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2_ttf/SDL2_ttf-2.20.2.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/setuptools/.mark-setuptools-51.3.3.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/setuptools/setuptools-51.3.3.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/six/.mark-six-1.15.0.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/six/six-1.15.0.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sqlite3/.mark-sqlite-amalgamation-3350500.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sqlite3/sqlite-amalgamation-3350500.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/python-for-android" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildozer/state.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06ce648b-b87f-4b17-a63c-d14d40380447.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/06ce648b-b87f-4b17-a63c-d14d40380447.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/centros.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/centros.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIVY/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/KIVY/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +60,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -63,13 +98,6 @@
     ]
   }
 }</component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="DatabaseScript" />
-      </set>
-    </option>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -96,6 +124,8 @@
       <workItem from="1732369233339" duration="887000" />
       <workItem from="1732381600051" duration="51000" />
       <workItem from="1732402001144" duration="1167000" />
+      <workItem from="1732559518675" duration="400000" />
+      <workItem from="1732560176993" duration="2095000" />
     </task>
     <servers />
   </component>

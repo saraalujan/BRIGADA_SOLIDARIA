@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 import requests 
 from flask_cors import CORS
 import centros
+import casos
 
 app = Flask(__name__)
 CORS(app)
@@ -35,8 +36,7 @@ def casos():
     response = []
 
     for row in result:
-        response.append({'lat': row[0],
-        'lon':row[1]})
+        response.append({'direccion':row[0], 'adultos':row[1], 'menores':[2]})
 
     return jsonify(response), 200
 
