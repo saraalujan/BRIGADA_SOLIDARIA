@@ -35,10 +35,6 @@ body {
   width: 100%;
 }
 
-/*body.fh5co-offcanvas {
-  overflow: hidden;
-}*/
-
 /*Hace mas pequeña la imagen de las integrantes del grupo*/
 .img-small{
   width: 200px;
@@ -161,25 +157,6 @@ figure {
   transition: 0.5s;
 }
 
-/*
-.btn.btn-sm {
-  padding: 5px 20px !important;
-}
-
-.btn.btn-md {
-  padding: 10px 20px !important;
-}
-
-.btn.btn-lg {
-  padding: 18px 36px !important;
-}*/
-
-/*
-.btn:hover, .btn:active, .btn:focus {
-  box-shadow: none !important;
-  outline: none !important;
-}*/
-
 /*Estilos del boton de añadir centros*/
 .btn-primary {
   background: #B05B3B;
@@ -187,39 +164,12 @@ figure {
   border: 2px solid #B05B3B;
 }
 
-/*Cambio de colo al pasar el mouse encima de añadir centro*/
+/*Cambio de color al pasar el mouse encima de añadir centro*/
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #ECB176 !important;
   border-color: #ECB176 !important;
 }
 
-/*
-.btn-primary.btn-outline {
-  background: transparent;
-  color: #FA7E0A;
-  border: 2px solid #FA7E0A;
-}
-
-.btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #80370a;
-  color: #fff;
-}
-
-.btn-success {
-  background: #5cb85c;
-  color: #fff;
-  border: 2px solid #5cb85c;
-}
-
-.btn-success:hover, .btn-success:focus, .btn-success:active {
-  background: #4cae4c !important;
-  border-color: #4cae4c !important;
-}*//*
-.btn-success.btn-outline {
-  background: transparent;
-  color: #5cb85c;
-  border: 2px solid #5cb85c;
-}*/
 .btn-success.btn-outline:hover, .btn-success.btn-outline:focus, .btn-success.btn-outline:active {
   background: #5cb85c;
   color: #fff;
