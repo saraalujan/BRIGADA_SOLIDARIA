@@ -510,7 +510,7 @@ figure {
 }
 
 
-/*LOGO CACTUS */
+/*LOGO CACTUS--------------- */
 
 #fh5co-logo a {
   display: flex;
@@ -523,6 +523,7 @@ figure {
   margin-right: 10px;
   vertical-align: middle;
 }
+/*----------------------------*/
 
 /*TITULO BRIGADA_SOLIDARIA PRINCIAPL */
 #fh5co-logo h3 {
@@ -535,14 +536,9 @@ figure {
 
 /*ES EL FONDO NEGRO DEL OSITO-----------------------------------------------------*/
 
+/*el nivelado de la foto con la parte de abajo del difuinado */
 #fh5co-hero {
   min-height: 700px;
-}
-
-#fh5co-hero .btn:hover, #fh5co-hero .btn:focus {
-  color: #fff !important;
-  border: 2px solid rgba(255, 255, 255, 0.8) !important;
-  background: transparent !important;
 }
 
 #fh5co-hero .flexslider {
@@ -551,6 +547,7 @@ figure {
   margin-bottom: 0;
 }
 
+/*lo que se extiende del difuminado hacia abajo*/
 #fh5co-hero .flexslider .slides li {
   background-repeat: no-repeat;
   background-size: cover;
@@ -558,6 +555,7 @@ figure {
   min-height: 700px !important;
 }
 
+/*difuminado osito*/
 #fh5co-hero .flexslider .slides .overlay-gradient {
   position: absolute;
   top: 0;
@@ -569,19 +567,7 @@ figure {
 /*----------------------------------------------------------------------------*/
 
 
-#fh5co-hero .flexslider .flex-direction-nav {
-  display: block;
-}
-
-/*LE AGREGA MARGEN ABAJO A LAS PAGINAS EN BLANCO --------------------------*/
-#fh5co-hero .flexslider .flex-direction-nav a {
-  top: 50%;
-  margin-top: 40px;
-}
-
-
-
-/*TITULOS DE LAS PAGINAS "SOBRE_NOSOTROS, CENTROS, ETC ------------------------*/
+/*TITULOS DE LAS PAGINAS  EN PANTALLA "SOBRE_NOSOTROS, CENTROS, ETC ------------------------*/
 
 #fh5co-hero .flexslider .slider-text {
   display: table;
@@ -589,7 +575,6 @@ figure {
   min-height: 700px;
   bottom: 0;
 }
-
 
 #fh5co-hero .flexslider .slider-text > .slider-text-inner {
   margin: 0;
@@ -635,6 +620,7 @@ figure {
 
 /*-------------------------------------------------------------------------------*/
 
+/*el borde blanco de pantalla que tienen sobre nosotros y buscar centros*/
 #fh5co-work-section, #fh5co-services-section,
 #fh5co-team-section {
   padding: 5em 0;
@@ -779,6 +765,7 @@ figure {
   background: rgba(0, 0, 0, 0.2);
 }
 
+/*separa los forms en dos y dos de buscar centro -----------------*/
 .services-inner {
   margin-bottom: 4em;
 }
@@ -817,10 +804,10 @@ figure {
   font-size: 22px;
   color: rgba(0, 0, 0, 0.5);
 }
-#fh5co-contact-section .contact-info li a {
-  font-weight: 400 !important;
-  color: rgba(0, 0, 0, 0.3);
-}
+/*ver si lo de arriba es del otro form----------------------*/
+
+
+/*estilo de los cuadrados blancos y lo de dentro, en forms añadir centro */
 #fh5co-contact-section .form-control {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -836,12 +823,18 @@ figure {
   -ms-border-radius: 0px;
   border-radius: 0px;
 }
+
+/*borde de los forms cuando tocas para poner informacion de añadir centro */
 #fh5co-contact-section .form-control:focus, #fh5co-contact-section .form-control:active {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(71, 38, 6, 0.637);
 }
+
+/*agrande los nombre y direccion de los forms de añadir centro*/
 #fh5co-contact-section input[type="text"] {
   height: 50px;
 }
+
+/*espaciado entre los forms de añadir centro */
 #fh5co-contact-section .form-group {
   margin-bottom: 30px;
 }
@@ -872,20 +865,8 @@ figure {
 }
 
 /*----------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------MANTENEMOS LO DE ABAJO--------*/
 
-#fh5co-wrapper {
-  overflow-x: hidden;
-  position: relative;
-}
-
-#fh5co-page {
-  position: relative;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
+/*no hace nada pero si se saca de desconifugra la pagina*/
 #offcanvas-menu {
   position: absolute;
   top: 0;
@@ -896,45 +877,6 @@ figure {
   width: 240px;
   padding: 20px;
   overflow-y: scroll !important;
-}
-#offcanvas-menu ul {
-  padding: 0;
-  margin: 0;
-}
-#offcanvas-menu ul li {
-  padding: 0;
-  margin: 0 0 10px 0;
-  list-style: none;
-}
-#offcanvas-menu ul li a {
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.fh5co-nav-toggle {
-  cursor: pointer;
-  text-decoration: none;
-}
-.fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
-  background: #000;
-}
-.fh5co-nav-toggle.dark.active i::before, .fh5co-nav-toggle.dark.active i::after {
-  background: #000;
-}
-.fh5co-nav-toggle:hover, .fh5co-nav-toggle:focus, .fh5co-nav-toggle:active {
-  outline: none;
-  border-bottom: none !important;
-}
-
-.fh5co-nav-toggle {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 9999;
-  display: block;
-  margin: 0 auto;
-  display: none;
-  cursor: pointer;
 }
 
 #map {
