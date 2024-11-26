@@ -192,9 +192,6 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-services-section
 
 
-#fh5co-services-section
-
-
 
 /*Cambio de color al pasar el mouse encima de añadir centro*/
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
@@ -466,6 +463,7 @@ h1, h2, h3, h4, h5, h6 {
   float: left;
   width: 100%;
   display: block;
+  margin-top:50px;
 }
 
 /*tamaño de las fotos de inicio que llevan a los enlaces*/
