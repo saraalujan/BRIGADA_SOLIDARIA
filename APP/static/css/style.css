@@ -54,7 +54,7 @@ form{
   margin-bottom: 30px;
 }
 
- /*Negrita de las letras del formulario de buscar centros*/
+/*Negrita de las letras del formulario de buscar centros*/
 form label{
   font-size: 16px;
   font-weight: bold;
@@ -86,6 +86,24 @@ form input[type="submit"], form button{
 
 /*Brillo del boton buscar dentro de buscar centros*/ 
 form input[type="submit"]:hover, form button:hover{
+  background-color: #b8915ed2;
+  color:white;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+/*Cambia estilos de boton añadir centros*/
+form input[type="añadir"], form button{
+  background-color: #6F4E37;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius: 2px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, text-shadow 0.2s ease;
+}
+
+/*Brillo del boton añadir centro dentro de añadir centro*/ 
+form input[type="añadir"]:hover, form button:hover{
   background-color: #b8915ed2;
   color:white;
   text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
@@ -157,24 +175,25 @@ figure {
   transition: 0.5s;
 }
 
-/*Estilos del boton de añadir centros*/
+/*Estilos del boton de añadir centros
 .btn-primary {
   background: #bd7942;
   color: #fff;
   border: 2px solid #bd7942;
-}
+}*/
 
 /*Cambio de color al pasar el mouse encima de añadir centro*/
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #ECB176 !important;
-  border-color: #ECB176 !important;
+  background: #DAC0A3 !important;
+  border-color: #DAC0A3 !important;
 }
 
+/*Color de la letra boton de añador centros*/
 .btn-success.btn-outline:hover, .btn-success.btn-outline:focus, .btn-success.btn-outline:active {
   background: #5cb85c;
   color: #fff;
 }
-
+/*
 .btn-info {
   background: #5bc0de;
   color: #fff;
@@ -183,7 +202,8 @@ figure {
 .btn-info:hover, .btn-info:focus, .btn-info:active {
   background: #46b8da !important;
   border-color: #46b8da !important;
-}
+}*/
+/*
 .btn-info.btn-outline {
   background: transparent;
   color: #5bc0de;
@@ -364,24 +384,24 @@ figure {
 .fh5co-cover .desc span a.fh5co-site-name {
   padding-bottom: 2px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-}
+}*/
 
-/* Superfish Override Menu */
+/* Pequeña linea debajo del menu */
 .sf-menu {
   margin: 0 !important;
 }
-
+/*Centra el menu de inicio*/
 .sf-menu {
   float: right;
 }
-
+/*Pequeña sombra al menu*/
 .sf-menu ul {
   box-shadow: none;
   border: transparent;
   min-width: 12em;
   width: 12em;
 }
-
+/*Todo el diseño de la barra de menu*/
 .sf-menu a {
   color: rgba(0, 0, 0, 0.8);
   padding: 2.4em 1em !important;
@@ -398,11 +418,12 @@ figure {
   font-family: "Roboto Slab", Arial, sans-serif;
   letter-spacing: 1px;
 }
+/*Sombra al pasa el mouse arriba de las opciones del menu*/
 .sf-menu a:hover, .sf-menu a:focus, .sf-menu a.active {
   background: #e6e6e6 !important;
   color: #000 !important;
 }
-
+/*Transparencia a el resto de las opciones del menu*/
 .sf-menu li,
 .sf-menu ul li,
 .sf-menu ul ul li,
@@ -410,7 +431,7 @@ figure {
 .sf-menu li.sfHover {
   background: transparent;
 }
-
+/*
 .sf-menu ul li a,
 .sf-menu ul ul li a {
   text-transform: none;
@@ -469,8 +490,8 @@ figure {
 .sf-arrows ul li:hover > .sf-with-ul:after,
 .sf-arrows ul .sfHover > .sf-with-ul:after {
   border-left-color: #ccc;
-}
-
+}*/
+/*Crea un menu flotante y le cambia el diseño*/
 #fh5co-header-section {
   background: rgb(219, 215, 207);
   position: absolute;
@@ -644,7 +665,7 @@ figure {
 #fh5co-contact-section{
   padding: 5em 0;
   justify-content: center;
-  background-color: #dbd7cf;
+  background-color: #E8D0B3;
 }
 
 /*----------------------------duda de si es el form de la base de datos -----------------------------------*/
@@ -652,7 +673,7 @@ figure {
   padding: 30px;  /* Espaciado interno del formulario */
   border-radius: 10px;  /* Bordes redondeados */
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  background: #c4a486c4;
+  background: #A67B5B;
   margin-top: 50px;  /* Separar el formulario de la parte superior */
   color:#4a4a4a;
   display:flex;
