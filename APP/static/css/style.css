@@ -169,6 +169,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.5s;
 }
 
+/*SUPUESTAS LETRAS BASE DE DATOS*/
+#fh5co-services-section .card{
+  color:red;
+}
 /*Cambio de color al pasar el mouse encima de añadir centro*/
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #DAC0A3 !important;
