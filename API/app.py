@@ -2,11 +2,12 @@ from flask import Flask, jsonify, request
 import requests 
 from flask_cors import CORS
 import centros
+import casos
 
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/api/v1/centros',methods=['GET'])
+@app.route('/api/v1/centros', methods=['GET'])
 def todos_los_centros():
     try:
         result = centros.todos_los_centros()
@@ -26,44 +27,41 @@ def todos_los_centros():
     return jsonify(response), 200
 
 @app.route('/api/v1/casos', methods=['GET'])
-def casos():
+def todos_los_casos():
     try:
-        result = casos.casos()
+        result = casos.todos_los_casos()
     except Exception as e:
         return jsonify({'error':str(e)}), 500
-    
+        
     response = []
 
     for row in result:
-        response.append({'lat': row[0],
-        'lon':row[1]})
-
+        response.append({'direccion': row[0],  # Dependiendo del formato de tu resultado
+        'adultos': row[1],
+        'menores': row[2]
+        })
     return jsonify(response), 200
 
-@app.route('/api/v1/anadircaso', methods=['GET','POST'])
+@app.route('/api/v1/anadircaso', methods=['POST'])
 def anadir_caso():
-    if request.method == 'GET':
-        lan = request.args.get('lat')
-        lon = request.args.get('lon')
-        
-    elif request.method == 'POST':
-        direccion = request.get_json()  
-        lat = casos.get('lat')
-        lon = casos.get('lon')
+    # Asegúrate de que se esté recibiendo JSON
+    if request.is_json:
+        data = request.get_json()
+        print(f"Datos recibidos: {data}")
 
-    data = [{
-        'lat': lat,
-        'lon': lon
-    }]
+        direccion = data.get('direccion')
+        adultos = data.get('adultos')
+        menores = data.get('menores')
 
-    try:
-        casos.anadir_caso(data)
-    except Exception as e:
-        return jsonify({'error':str(e)}), 500
+        try:
+            casos.anadir_caso(data)  # Llamada a la función para agregar el caso
+            return jsonify({'message': 'Caso añadido correctamente'}), 200
+        except Exception as e:
+            return jsonify({'error': str(e)}), 500
+    else:
+        return jsonify({'error': 'Se esperaba un contenido de tipo JSON'}), 415
+
     
-    return jsonify(data), 201
-
-
 @app.route('/api/v1/centros/direcciones', methods=['GET'])
 def direcciones():
     try:

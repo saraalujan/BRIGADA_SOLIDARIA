@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="PY-242.23726.102">
-    <data-source name="@localhost" uuid="06ce648b-b87f-4b17-a63c-d14d40380447">
+    <data-source name="@localhost" uuid="228a42cc-58f1-4ee2-a5c7-346fda7a678a">
       <database-info product="MySQL" version="8.0.40-0ubuntu0.24.04.1" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="8.0.40" exact-driver-version="8.2">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -12,7 +12,10 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" negative="1" />
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="IDS" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>
