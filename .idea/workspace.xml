@@ -5,189 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed27476a-d7d7-427f-bc08-fcd7b26f5aa3" name="Changes" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/hostpython3/.mark-Python-3.11.5.tgz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/hostpython3/Python-3.11.5.tgz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/kivy/.mark-2.3.0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/kivy/2.3.0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/libffi/.mark-v3.4.2.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/libffi/v3.4.2.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/openssl/.mark-openssl-1.1.1w.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/openssl/openssl-1.1.1w.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/pyjnius/.mark-1.6.1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/pyjnius/1.6.1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/python3/.mark-Python-3.11.5.tgz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/python3/Python-3.11.5.tgz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2/.mark-SDL2-2.28.5.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2/SDL2-2.28.5.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2_image/.mark-SDL2_image-2.8.0.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2_image/SDL2_image-2.8.0.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2_mixer/.mark-SDL2_mixer-2.6.3.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2_mixer/SDL2_mixer-2.6.3.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2_ttf/.mark-SDL2_ttf-2.20.2.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sdl2_ttf/SDL2_ttf-2.20.2.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/setuptools/.mark-setuptools-51.3.3.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/setuptools/setuptools-51.3.3.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/six/.mark-six-1.15.0.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/six/six-1.15.0.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sqlite3/.mark-sqlite-amalgamation-3350500.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/packages/sqlite3/sqlite-amalgamation-3350500.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/android/platform/python-for-android" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.buildozer/state.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06ce648b-b87f-4b17-a63c-d14d40380447.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/06ce648b-b87f-4b17-a63c-d14d40380447.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/centros.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/centros.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KIVY/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/KIVY/main.py" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/06ce648b-b87f-4b17-a63c-d14d40380447.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/06ce648b-b87f-4b17-a63c-d14d40380447.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/console_sql.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> ba74bf59d34873bbf8acf49c806a232a7665e472
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
-    <envs>
-      <env key="FLASK_APP" value="app" />
-    </envs>
-    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
-    <option name="myEnvs">
-      <map>
-        <entry key="FLASK_APP" value="app" />
-      </map>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2oeqtXJmCQmK0SzcWgCT4KTf5UI" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Database Script.console.sql.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "database.data.extractors.current.export.id": "JSON-Groovy.json.groovy",
-    "database.data.extractors.current.id": "JSON-Groovy.json.groovy",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/tuti/BRIGADA_SOLIDARIA/backup.sql",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.tools",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "java.sql.Driver",
-      "mysql"
-    ],
-    "RunConfigurationTargetLRU": [
-      "415fb1cd-32f2-44f8-8be0-c7df802adcb9/schema/\"IDS\"",
-      "06ce648b-b87f-4b17-a63c-d14d40380447"
-    ]
-  }
-<<<<<<< HEAD
-}</component>
-=======
-}]]></component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="DatabaseScript" />
-      </set>
-    </option>
-    <option name="openRunningConfigInTab" value="true" />
-  </component>
-  <component name="RunManager">
-    <configuration name="console.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
-      <script-file value="$APPLICATION_CONFIG_DIR$/consoles/db/06ce648b-b87f-4b17-a63c-d14d40380447/console.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="06ce648b-b87f-4b17-a63c-d14d40380447" />
-      <method v="2" />
-    </configuration>
-  </component>
->>>>>>> ba74bf59d34873bbf8acf49c806a232a7665e472
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23726.102" />
-        <option value="bundled-python-sdk-5e1850174b45-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23726.102" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="ed27476a-d7d7-427f-bc08-fcd7b26f5aa3" name="Changes" comment="" />
-      <created>1731240612327</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1731240612327</updated>
-      <workItem from="1731240614213" duration="1357000" />
-      <workItem from="1731243166283" duration="223000" />
-      <workItem from="1731243516304" duration="1195000" />
-      <workItem from="1731246477245" duration="2665000" />
-      <workItem from="1731251341277" duration="11406000" />
-      <workItem from="1732297907326" duration="2589000" />
-      <workItem from="1732358036239" duration="769000" />
-      <workItem from="1732369233339" duration="887000" />
-      <workItem from="1732381600051" duration="51000" />
-      <workItem from="1732402001144" duration="1167000" />
-<<<<<<< HEAD
-      <workItem from="1732559518675" duration="400000" />
-      <workItem from="1732560176993" duration="2095000" />
-=======
-<<<<<<< HEAD
-      <workItem from="1732490792153" duration="2085000" />
-=======
-      <workItem from="1732480059037" duration="8274000" />
->>>>>>> 84a67d5c466576a4fa6be8b53c2411dfa3336147
->>>>>>> ba74bf59d34873bbf8acf49c806a232a7665e472
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-</project><?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
-  <component name="ChangeListManager">
-    <list default="true" id="ed27476a-d7d7-427f-bc08-fcd7b26f5aa3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06ce648b-b87f-4b17-a63c-d14d40380447.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/06ce648b-b87f-4b17-a63c-d14d40380447.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/console_sql.xml" beforeDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
->>>>>>> 6d1e4c5 (cambios)
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -292,14 +115,10 @@
       <workItem from="1732381600051" duration="51000" />
       <workItem from="1732402001144" duration="1167000" />
 <<<<<<< HEAD
-<<<<<<< HEAD
       <workItem from="1732490792153" duration="2085000" />
 =======
       <workItem from="1732480059037" duration="8274000" />
 >>>>>>> 84a67d5c466576a4fa6be8b53c2411dfa3336147
-=======
-      <workItem from="1732484016247" duration="3131000" />
->>>>>>> 6d1e4c5 (cambios)
     </task>
     <servers />
   </component>

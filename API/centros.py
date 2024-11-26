@@ -17,6 +17,10 @@ QUERY_POR_CAPACIDAD = "SELECT * FROM centros WHERE capacidad >= :capacidad"
 
 QUERY_POR_DIRECCION = "SELECT * FROM centros WHERE direccion = :direccion"
 
+QUERY_ANADIR_CASO = "INSERT INTO casos (lat, lon) VALUES ( :lat, :lon)"
+
+QUERY_CASOS = "SELECT * FROM casos"
+
 def run_query(query,parameters=None):
     with engine.connect() as conn:
         result = conn.execute(text(query),parameters)
@@ -26,6 +30,12 @@ def run_query(query,parameters=None):
 
 def anadir_centro(data):
     run_query(QUERY_ANADIR_CENTRO, data)
+
+def anadir_caso(data):
+    run_query(QUERY_ANADIR_CASO, data)
+
+def casos():
+    run_query(QUERY_CASOS).fetchall()
 
 def todos_los_centros():
     return run_query(QUERY_TODOS_LOS_CENTROS).fetchall()

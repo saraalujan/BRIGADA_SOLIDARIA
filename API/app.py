@@ -1,8 +1,7 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request
 import requests 
 from flask_cors import CORS
 import centros
-import casos
 
 app = Flask(__name__)
 CORS(app)
@@ -27,7 +26,7 @@ def todos_los_centros():
     return jsonify(response), 200
 
 @app.route('/api/v1/casos', methods=['GET'])
-def todos_los_casos():
+def casos():
     try:
         result = casos.casos()  # Llamada a la función que obtiene los casos
         print(result)  # Depuración: Imprime el resultado para ver si tiene datos
@@ -112,10 +111,10 @@ def anadir_centro():
 
     try:
         centros.anadir_centro(data)
-    except:
-        return jsonify({'error':'error'}), 500
+    except Exception as e:
+        return jsonify({'error':str(e)}), 500
     
-    return render_template('nuevos_centros.html')
+    return jsonify(data), 201
     
 @app.route('/api/v1/centros/comuna/<int:comuna>', methods=['GET'])
 def por_comuna(comuna):
