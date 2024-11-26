@@ -35,10 +35,7 @@ body {
   width: 100%;
 }
 
-body.fh5co-offcanvas {
-  overflow: hidden;
-}
-
+/*Hace mas pequeña la imagen de las integrantes del grupo*/
 .img-small{
   width: 200px;
   height: auto;
@@ -48,6 +45,7 @@ body.fh5co-offcanvas {
 
 }
 
+/*Enmarca los filtros de buscar centros*/
 form{
   background-color: #f8f8f8;
   padding:20px;
@@ -56,6 +54,7 @@ form{
   margin-bottom: 30px;
 }
 
+ /*Negrita de las letras del formulario de buscar centros*/
 form label{
   font-size: 16px;
   font-weight: bold;
@@ -64,6 +63,7 @@ form label{
   color:#181717c2;
 }
 
+/*Centra el boton buscar debajo de los filtros*/
 form input[type="text"], form input[type="int"]{
   width:100%;
   padding:10px;
@@ -73,6 +73,7 @@ form input[type="text"], form input[type="int"]{
   box-sizing: border-box;
 }
 
+/*Cambia algunos estilos de los botones buscar*/
 form input[type="submit"], form button{
   background-color: #d3c3b5d2;
   color:black;
@@ -83,24 +84,29 @@ form input[type="submit"], form button{
   transition: background-color 0.3s ease, text-shadow 0.2s ease;
 }
 
+/*Brillo del boton buscar dentro de buscar centros*/ 
 form input[type="submit"]:hover, form button:hover{
   background-color: #b8915ed2;
   color:white;
   text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
 }
 
+/*CREO Color de la infromacion al filtrar los centros*/
 a {
   color: #bd844ff5;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+
+/*Cambios en el estilo de la base de datos al buscar centros*/
 a:hover {
   text-decoration: none !important;
   color: #bd844ff5 !important;
   text-shadow: 0 0 10px #bd844ff5;
 }
 
+/*Cambia el estilo de el texto en sobre nosotros*/
 p, ul, ol {
   margin-bottom: 1.5em;
   font-size: 18px;
@@ -108,6 +114,7 @@ p, ul, ol {
   font-family: "Roboto", Arial, serif;
 }
 
+/*Cambia los estilos del mision y vision*/
 h1, h2, h3, h4, h5, h6 {
   color: #212121;
   font-family: "Roboto Slab", Arial, sans-serif;
@@ -115,25 +122,30 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 30px 0;
 }
 
+/*
 figure {
   margin-bottom: 2em;
-}
+}*/
 
+/*CATA*/
 ::-webkit-selection {
   color: #fcfcfc;
   background: #FA7E0A;
 }
 
+/*CATA*/
 ::-moz-selection {
   color: #fcfcfc;
   background: #FA7E0A;
 }
 
+/*CATA*/
 ::selection {
   color: #fcfcfc;
   background: #FA7E0A;
 }
 
+/*CATA*/
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
@@ -144,53 +156,20 @@ figure {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.btn.btn-sm {
-  padding: 5px 20px !important;
-}
-.btn.btn-md {
-  padding: 10px 20px !important;
-}
-.btn.btn-lg {
-  padding: 18px 36px !important;
-}
-.btn:hover, .btn:active, .btn:focus {
-  box-shadow: none !important;
-  outline: none !important;
-}
 
+/*Estilos del boton de añadir centros*/
 .btn-primary {
   background: #bd7942;
   color: #fff;
   border: 2px solid #bd7942;
 }
+
+/*Cambio de color al pasar el mouse encima de añadir centro*/
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #fb8b23 !important;
-  border-color: #fb8b23 !important;
-}
-.btn-primary.btn-outline {
-  background: transparent;
-  color: #FA7E0A;
-  border: 2px solid #FA7E0A;
-}
-.btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #80370a;
-  color: #fff;
+  background: #ECB176 !important;
+  border-color: #ECB176 !important;
 }
 
-.btn-success {
-  background: #5cb85c;
-  color: #fff;
-  border: 2px solid #5cb85c;
-}
-.btn-success:hover, .btn-success:focus, .btn-success:active {
-  background: #4cae4c !important;
-  border-color: #4cae4c !important;
-}
-.btn-success.btn-outline {
-  background: transparent;
-  color: #5cb85c;
-  border: 2px solid #5cb85c;
-}
 .btn-success.btn-outline:hover, .btn-success.btn-outline:focus, .btn-success.btn-outline:active {
   background: #5cb85c;
   color: #fff;
