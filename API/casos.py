@@ -19,6 +19,5 @@ def run_query(query,parameters=None):
 def anadir_caso(data):
     run_query(QUERY_ANADIR_CASO, data)
 
-def casos():
-    result = run_query(QUERY_TODOS_LOS_CASOS).fetchall()
-    return result  
+def todos_los_casos():
+    run_query(QUERY_TODOS_LOS_CASOS).fetchall() 

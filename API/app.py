@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 import requests 
 from flask_cors import CORS
 import centros
+import casos
 
 app = Flask(__name__)
 CORS(app)
@@ -26,9 +27,9 @@ def todos_los_centros():
     return jsonify(response), 200
 
 @app.route('/api/v1/casos', methods=['GET'])
-def casos():
+def todos_los_casos():
     try:
-        result = casos.casos()  # Llamada a la función que obtiene los casos
+        result = casos.todos_los_casos()  # Llamada a la función que obtiene los casos
         print(result)  # Depuración: Imprime el resultado para ver si tiene datos
         if not result:
             return jsonify({"message": "No se encontraron casos."}), 404

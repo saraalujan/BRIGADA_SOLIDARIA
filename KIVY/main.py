@@ -8,7 +8,7 @@ from kivymd.uix.textfield import MDTextField
 from kivy_garden.mapview import MapView, MapMarker
 from kivy.network.urlrequest import UrlRequest
 import requests
-from kivy.lang import Builder  # Para cargar el archivo .kv
+from kivy.lang import Builder
 
 # Pantalla Principal
 class MainScreen(Screen):
@@ -25,66 +25,44 @@ class MainScreen(Screen):
 class MapScreen(Screen):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        # La inicialización de `map_view` ahora se hará desde el archivo .kv usando el id
         self.map_view = None
 
     def on_enter(self):
-        # Este método se llama cuando la pantalla se activa
-        self.map_view = self.ids.mapview  # Asignar el MapView usando el id del archivo .kv
+        self.map_view = self.ids.mapview
 
     def mostrar_casos(self, instance):
         print("Solicitando datos...")
-        # Realizar la solicitud a la API usando UrlRequest
-        url = "http://127.0.0.1:5001/api/v1/casos"  # Cambia esta URL por la de tu API
+        url = "http://127.0.0.1:5001/api/v1/casos"
         UrlRequest(url, on_success=self.on_success, on_failure=self.on_failure)
 
     def obtener_coordenadas(self, direccion):
-        # Definir los límites geográficos de la Ciudad Autónoma de Buenos Aires (CABA)
         lat_min = -34.8
         lat_max = -34.5
         lon_min = -58.5
         lon_max = -58.3
 
-        # Usar Nominatim para obtener las coordenadas (lat y lon) de una dirección dentro de CABA
         geocode_url = f"https://nominatim.openstreetmap.org/search?q={direccion}&format=json&addressdetails=1&bounded=1&viewbox={lon_min},{lat_max},{lon_max},{lat_min}&extratags=1"
-
-        # Definir el encabezado User-Agent requerido por Nominatim
-        headers = {
-            'User-Agent': 'MapApp/1.0'  # Cambia esto por tu email o un identificador apropiado
-        }
-
-        # Hacer la solicitud con el encabezado User-Agent
+        headers = {'User-Agent': 'MapApp/1.0'}
         response = requests.get(geocode_url, headers=headers)
-        
-        # Verificar si se encontró una respuesta válida
+
         data = response.json()
         if data:
-            # Extraer las coordenadas
             latitud = float(data[0]['lat'])
             longitud = float(data[0]['lon'])
             return latitud, longitud
         else:
-            return None, None  # No se encontraron coordenadas
+            return None, None
 
     def on_success(self, request, result):
-        # Imprimir la respuesta completa para verificar su formato
         print(f"Respuesta completa recibida: {result}")
-
         try:
-            # Asegurarnos de que la respuesta es una lista
             if isinstance(result, list):
-                print("Procesando los casos...")
-
-                # Evitar limpiar los widgets del mapa, solo agregamos los nuevos marcadores
                 for caso in result:
                     direccion = caso.get('direccion')
-
-                    # Usar Nominatim para obtener las coordenadas de la dirección dentro de CABA
                     latitud, longitud = self.obtener_coordenadas(direccion)
 
                     if latitud and longitud:
                         print(f"Marcador: lat={latitud}, lon={longitud}")
-                        # Agregar marcador al mapa
                         marker = MapMarker(lat=latitud, lon=longitud)
                         self.map_view.add_widget(marker)
                     else:
@@ -133,16 +111,14 @@ class FormScreen(Screen):
         self.manager.current = "main_screen"
 
 
-# Aplicación principal
 class MyApp(MDApp):
     def build(self):
-        Builder.load_file("main.kv")  # Asegúrate de cargar el archivo .kv aquí
+        Builder.load_file("main.kv")
         screen_manager = ScreenManager()
         screen_manager.add_widget(MainScreen(name="main_screen"))
         screen_manager.add_widget(MapScreen(name="map_screen"))
         screen_manager.add_widget(FormScreen(name="form_screen"))
         return screen_manager
 
-# Ejecutar la aplicación
 if __name__ == "__main__":
     MyApp().run()
