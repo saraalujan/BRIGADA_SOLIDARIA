@@ -46,33 +46,25 @@ def todos_los_casos():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/api/v1/anadircaso', methods=['POST'])
+def anadir_caso():
+    # Asegúrate de que se esté recibiendo JSON
+    if request.is_json:
+        data = request.get_json()
+        print(f"Datos recibidos: {data}")
 
-@app.route('/api/v1/anadircaso',methods=['GET','POST'])
-def anadir_centro():
-    if request.method == 'GET':
-        direccion = request.args.get('direccion')
-        adultos = request.args.get('adultos')
-        menores = request.args.get('menores')
+        direccion = data.get('direccion')
+        adultos = data.get('adultos')
+        menores = data.get('menores')
 
-    # Si es una solicitud POST, obtenemos los parámetros del cuerpo (JSON)
-    elif request.method == 'POST':
-        casos = request.get_json()  
-        direccion = casos.get('direccion')
-        adultos = casos.get('adultos')
-        menores = casos.get('menores')
+        try:
+            casos.anadir_caso(data)  # Llamada a la función para agregar el caso
+            return jsonify({'message': 'Caso añadido correctamente'}), 200
+        except Exception as e:
+            return jsonify({'error': str(e)}), 500
+    else:
+        return jsonify({'error': 'Se esperaba un contenido de tipo JSON'}), 415
 
-    data = [{
-        'direccion': direccion,
-        'adultos': adultos,
-        'menores': menores
-    }]
-
-    try:
-        casos.anadir_caso(data)
-    except:
-        return jsonify({'error':'error'}), 500
-    
-    return jsonify('excelente')
     
 @app.route('/api/v1/centros/direcciones', methods=['GET'])
 def direcciones():

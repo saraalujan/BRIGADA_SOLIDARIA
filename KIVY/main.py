@@ -1,134 +1,148 @@
+import json
 from kivy.app import App
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.label import Label
-from kivy.uix.textinput import TextInput
-from kivy.uix.button import Button
-from kivy.uix.popup import Popup
-from kivy.core.window import Window
-from sqlalchemy import create_engine, text
+from kivy.uix.screenmanager import Screen, ScreenManager
+from kivymd.app import MDApp
+from kivymd.uix.button import MDRaisedButton
+from kivymd.uix.label import MDLabel
+from kivymd.uix.textfield import MDTextField
+from kivy_garden.mapview import MapView, MapMarker
+from kivy.network.urlrequest import UrlRequest
+import requests
+from kivy.lang import Builder  # Para cargar el archivo .kv
 
-# Configurar tamaño y color de fondo de la ventana
-Window.size = (400, 600)
-Window.clearcolor = (0.95, 0.95, 0.95, 1)  # Fondo claro
-
-class FormularioScreen(BoxLayout):
+# Pantalla Principal
+class MainScreen(Screen):
     def __init__(self, **kwargs):
-        super().__init__(orientation='vertical', spacing=20, padding=30, **kwargs)
+        super().__init__(**kwargs)
 
-        # Inicializar el diccionario 'inputs' para almacenar los campos de texto
-        self.inputs = {}
+    def go_to_map(self):
+        self.manager.current = "map_screen"
 
-        # Título del formulario
-        self.add_widget(Label(
-            text="Registro de Casos",
-            font_size=24,
-            bold=True,
-            color=(0.2, 0.2, 0.2, 1),
-            size_hint=(1, 0.2),
-            halign="center"
-        ))
+    def go_to_form(self):
+        self.manager.current = "form_screen"
 
-        # Campo para Dirección
-        self.add_widget(self.crear_campo("Dirección:", "Ingrese la dirección"))
 
-        # Campo para Adultos
-        self.add_widget(self.crear_campo("Cantidad de Adultos:", "Ingrese la cantidad de adultos", input_filter="int"))
+class MapScreen(Screen):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        # La inicialización de `map_view` ahora se hará desde el archivo .kv usando el id
+        self.map_view = None
 
-        # Campo para Menores
-        self.add_widget(self.crear_campo("Cantidad de Menores:", "Ingrese la cantidad de menores", input_filter="int"))
+    def on_enter(self):
+        # Este método se llama cuando la pantalla se activa
+        self.map_view = self.ids.mapview  # Asignar el MapView usando el id del archivo .kv
 
-        # Botón para Enviar
-        self.boton_enviar = Button(
-            text="Enviar Datos",
-            size_hint=(1, 0.2),
-            background_color=(0.2, 0.6, 0.8, 1),
-            color=(1, 1, 1, 1),
-            font_size=18
-        )
-        self.boton_enviar.bind(on_press=self.enviar_datos)
-        self.add_widget(self.boton_enviar)
+    def mostrar_casos(self, instance):
+        print("Solicitando datos...")
+        # Realizar la solicitud a la API usando UrlRequest
+        url = "http://127.0.0.1:5001/api/v1/casos"  # Cambia esta URL por la de tu API
+        UrlRequest(url, on_success=self.on_success, on_failure=self.on_failure)
 
-    def crear_campo(self, etiqueta, placeholder, input_filter=None):
-        """Crea un campo de entrada con etiqueta y campo de texto."""
-        layout = BoxLayout(orientation='vertical', spacing=5, size_hint=(1, 0.3))
+    def obtener_coordenadas(self, direccion):
+        # Definir los límites geográficos de la Ciudad Autónoma de Buenos Aires (CABA)
+        lat_min = -34.8
+        lat_max = -34.5
+        lon_min = -58.5
+        lon_max = -58.3
 
-        label = Label(
-            text=etiqueta,
-            font_size=16,
-            size_hint=(1, 0.4),
-            color=(0.2, 0.2, 0.2, 1),
-            halign="left",
-            valign="middle"
-        )
-        label.bind(size=label.setter('text_size'))  # Alineación vertical
-        layout.add_widget(label)
+        # Usar Nominatim para obtener las coordenadas (lat y lon) de una dirección dentro de CABA
+        geocode_url = f"https://nominatim.openstreetmap.org/search?q={direccion}&format=json&addressdetails=1&bounded=1&viewbox={lon_min},{lat_max},{lon_max},{lat_min}&extratags=1"
 
-        input_text = TextInput(
-            hint_text=placeholder,
-            multiline=False,
-            padding=(10, 10),
-            size_hint=(1, 0.6),
-            background_color=(0.9, 0.9, 0.9, 1),
-            foreground_color=(0, 0, 0, 1),
-            cursor_color=(0.2, 0.6, 0.8, 1),
-            font_size=14,
-            input_filter=input_filter
-        )
-        layout.add_widget(input_text)
+        # Definir el encabezado User-Agent requerido por Nominatim
+        headers = {
+            'User-Agent': 'MapApp/1.0'  # Cambia esto por tu email o un identificador apropiado
+        }
 
-        # Guardar la referencia al campo de texto
-        self.inputs[etiqueta] = input_text
-        return layout
-
-    def enviar_datos(self, instance):
-        # Obtener datos del formulario
-        direccion = self.inputs["Dirección:"].text
-        adultos = self.inputs["Cantidad de Adultos:"].text
-        menores = self.inputs["Cantidad de Menores:"].text
-
-        # Validación
-        if not direccion:
-            self.mostrar_popup("Error", "Por favor, complete todos los campos correctamente.")
+        # Hacer la solicitud con el encabezado User-Agent
+        response = requests.get(geocode_url, headers=headers)
+        
+        # Verificar si se encontró una respuesta válida
+        data = response.json()
+        if data:
+            # Extraer las coordenadas
+            latitud = float(data[0]['lat'])
+            longitud = float(data[0]['lon'])
+            return latitud, longitud
         else:
-            try:
-                adultos = int(adultos)
-            except ValueError:
-                self.mostrar_popup("Error", "La cantidad de adultos debe ser un número válido.")
-                return
-            
-            try:
-                menores = int(menores)
-            except ValueError:
-                self.mostrar_popup("Error", "La cantidad de menores debe ser un número válido.")
-                return
-            
-            # Aquí procesarías los datos y los insertas en la base de datos
-            try:
-                self.insertar_datos_en_bd(direccion, adultos, menores)
-                self.mostrar_popup("Éxito", "Datos enviados y guardados correctamente.")
-            except Exception as e:
-                self.mostrar_popup("Error", f"Ocurrió un error al guardar los datos: {str(e)}")
+            return None, None  # No se encontraron coordenadas
 
-    def mostrar_popup(self, titulo, mensaje):
-        """Muestra un popup con un mensaje dado."""
-        popup = Popup(
-            title=titulo,
-            content=Label(
-                text=mensaje,
-                halign="center",
-                valign="middle",
-                color=(0.2, 0.2, 0.2, 1),
-                font_size=16
-            ),
-            size_hint=(0.8, 0.4)
-        )
-        popup.open()
+    def on_success(self, request, result):
+        # Imprimir la respuesta completa para verificar su formato
+        print(f"Respuesta completa recibida: {result}")
+
+        try:
+            # Asegurarnos de que la respuesta es una lista
+            if isinstance(result, list):
+                print("Procesando los casos...")
+
+                # Evitar limpiar los widgets del mapa, solo agregamos los nuevos marcadores
+                for caso in result:
+                    direccion = caso.get('direccion')
+
+                    # Usar Nominatim para obtener las coordenadas de la dirección dentro de CABA
+                    latitud, longitud = self.obtener_coordenadas(direccion)
+
+                    if latitud and longitud:
+                        print(f"Marcador: lat={latitud}, lon={longitud}")
+                        # Agregar marcador al mapa
+                        marker = MapMarker(lat=latitud, lon=longitud)
+                        self.map_view.add_widget(marker)
+                    else:
+                        print(f"No se encontraron coordenadas para la dirección: {direccion}")
+            else:
+                print("La respuesta no es una lista como se esperaba.")
+        except Exception as e:
+            print(f"Error al procesar la respuesta: {e}")
+
+    def on_failure(self, request, error):
+        print(f"Error al cargar los casos: {error}")
+
+    def go_to_main(self):
+        self.manager.current = "main_screen"
 
 
-class FormularioApp(App):
+# Pantalla del Formulario
+class FormScreen(Screen):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+    def submit_form(self, direccion, adultos, menores):
+        data = {
+            "direccion": direccion,
+            "adultos": int(adultos),
+            "menores": int(menores)
+        }
+
+        json_data = json.dumps(data)
+        url = "http://127.0.0.1:5001/api/v1/anadircaso"
+        headers = {'Content-Type': 'application/json'}
+
+        UrlRequest(url, req_body=json_data, method='POST', on_success=self.on_success, on_failure=self.on_failure, req_headers=headers)
+
+    def on_success(self, request, result):
+        print("Datos enviados exitosamente", result)
+        # Mostrar mensaje de éxito en la pantalla del formulario
+        self.ids.message_label.text = "¡Caso añadido con éxito!"
+
+    def on_failure(self, request, error):
+        print(f"Error al enviar los datos: {error}")
+        # Mostrar mensaje de error en la pantalla del formulario
+        self.ids.message_label.text = "Error al añadir el caso."
+
+    def go_to_main(self):
+        self.manager.current = "main_screen"
+
+
+# Aplicación principal
+class MyApp(MDApp):
     def build(self):
-        return FormularioScreen()
+        Builder.load_file("main.kv")  # Asegúrate de cargar el archivo .kv aquí
+        screen_manager = ScreenManager()
+        screen_manager.add_widget(MainScreen(name="main_screen"))
+        screen_manager.add_widget(MapScreen(name="map_screen"))
+        screen_manager.add_widget(FormScreen(name="form_screen"))
+        return screen_manager
 
-
+# Ejecutar la aplicación
 if __name__ == "__main__":
-    FormularioApp().run()
+    MyApp().run()

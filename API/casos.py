@@ -5,7 +5,7 @@ from sqlalchemy.exc import SQLAlchemyError
 
 engine = create_engine("mysql://root:1234@localhost:3306/IDS")
 
-QUERY_ANADIR_CASO = "INSERT INTO casos (direccion, adultos, menores) VALUES (:direccion, :adultos, :menores)"
+QUERY_ANADIR_CASO = "INSERT INTO casos ( direccion, adultos, menores) VALUES ( :direccion, :adultos, :menores)"
 
 QUERY_TODOS_LOS_CASOS = "SELECT * FROM casos"
 
