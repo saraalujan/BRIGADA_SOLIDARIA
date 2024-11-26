@@ -143,26 +143,36 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #fh5co-services-section{
-  margin-top:100px;
+  margin-top:50px;
   padding:20px;
+  position:relative;
 }
 
 #fh5co-services-section .row{
   margin-top: 25px;
 }
 
-#fh5co-services-section .col-md-4{
+#fh5co-services-section .col-md-6{
   margin-bottom:20px;
   padding-left:15px;
   padding-right:15px;
 }
 
 #fh5co-services-section .card-title{
-  font-size:1.75rem;
-  color:#5a3e2b;
-  font-weight:bold;
+  font-size:2.25rem;
   text-decoration: underline;
-  margin-bottom:20px;
+  color:#8a6e4a;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition:all 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(90, 62, 43, 0.5);
+}
+
+#fh5co-services-section .card-title:hover{
+  color:#5a3e2b;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+
 }
 
 #fh5co-services-section p.card-text strong{
@@ -177,20 +187,31 @@ h1, h2, h3, h4, h5, h6 {
   line-height:1.5;
 }
 
+#fh5co-services-section .centros{
+  display:flex;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width:100%;
+}
+
 #fh5co-services-section .fh5co-heading{
   display:flex;
   justify-content: center;
   align-items: center;
-
   text-align: center;
+  margin: 0 auto;
+  height: 10px 0;
 }
+
+
 
 #fh5co-services-section .fh5co-heading h2{
   font-size:3rem;
   color:rgb(126, 102, 75);
   text-shadow: 2px 2px 5px rgba(93, 56, 38, 0.4);
-  text-align:center;
-  margin-top:10px;
+  margin-top:40px;
   font-size: 35px;
   transition: all 0.3s ease;
 }
