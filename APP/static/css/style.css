@@ -170,9 +170,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*SUPUESTAS LETRAS BASE DE DATOS*/
-#fh5co-services-section .card-text{
-  color:red;
+#fh5co-services-section h5.card-title{
+  color:#5a3e2b;
+  font-weight:bold;
+  text-decoration: underline;
+  margin-bottom:15px;
 }
+
+#fh5co-services-section p.card-text strong{
+  color:#5a3e2b;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+#fh5co-services-section p.card-text{
+  color:rgba(0,0,0,0.8);
+  margin-bottom:10px;
+}
+
+#fh5co-services-section
+
+
+#fh5co-services-section
+
+
+
 /*Cambio de color al pasar el mouse encima de añadir centro*/
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #DAC0A3 !important;
