@@ -7,7 +7,7 @@ import casos
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/api/v1/centros',methods=['GET'])
+@app.route('/api/v1/centros', methods=['GET'])
 def todos_los_centros():
     try:
         result = centros.todos_los_centros()
@@ -29,22 +29,18 @@ def todos_los_centros():
 @app.route('/api/v1/casos', methods=['GET'])
 def todos_los_casos():
     try:
-        result = casos.todos_los_casos()  # Llamada a la función que obtiene los casos
-        print(result)  # Depuración: Imprime el resultado para ver si tiene datos
-        if not result:
-            return jsonify({"message": "No se encontraron casos."}), 404
-        
-        response = []
-        for row in result:
-            response.append({
-                'direccion': row[0],  # Dependiendo del formato de tu resultado
-                'adultos': row[1],
-                'menores': row[2]
-            })
-        return jsonify(response), 200
-
+        result = casos.todos_los_casos()
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        return jsonify({'error':str(e)}), 500
+        
+    response = []
+
+    for row in result:
+        response.append({'direccion': row[0],  # Dependiendo del formato de tu resultado
+        'adultos': row[1],
+        'menores': row[2]
+        })
+    return jsonify(response), 200
 
 @app.route('/api/v1/anadircaso', methods=['POST'])
 def anadir_caso():
