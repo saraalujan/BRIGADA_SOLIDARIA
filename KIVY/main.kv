@@ -1,0 +1,97 @@
+# main.kv
+
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        
+        MDRaisedButton:
+            text: "Ir al Mapa"
+            size_hint: None, None
+            size: 200, 50
+            pos_hint: {"center_x": 0.5}
+            on_press: root.go_to_map()
+
+        MDRaisedButton:
+            text: "Ir al Formulario"
+            size_hint: None, None
+            size: 200, 50
+            pos_hint: {"center_x": 0.5}
+            on_press: root.go_to_form()
+
+
+<MapScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        # El mapa
+        MapView:
+            id: mapview  # Asignar un id al MapView
+            zoom: 12
+            lat: -34.6037  # Coordenadas de Buenos Aires
+            lon: -58.3816
+            size_hint: 1, 0.8  # El mapa ocupa el 80% de la pantalla
+
+        # Botón para cargar los casos desde la API
+        MDRaisedButton:
+            text: "Mostrar Casos"
+            size_hint: None, None
+            size: 200, 50
+            pos_hint: {"center_x": 0.5}
+            on_press: root.mostrar_casos(self)
+            
+
+        MDRaisedButton:
+            text: "Volver al Inicio"
+            size_hint: None, None
+            size: 200, 50
+            pos_hint: {"center_x": 0.5}
+            on_press: root.go_to_main()
+
+
+<FormScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        MDTextField:
+            id: direccion
+            hint_text: "Dirección"
+            size_hint: 1, None
+            height: "40dp"
+            pos_hint: {"center_x": 0.5}
+
+        MDTextField:
+            id: adultos
+            hint_text: "Cantidad de adultos"
+            size_hint: 1, None
+            height: "40dp"
+            pos_hint: {"center_x": 0.5}
+
+        MDTextField:
+            id: menores
+            hint_text: "Cantidad de menores"
+            size_hint: 1, None
+            height: "40dp"
+            pos_hint: {"center_x": 0.5}
+
+        MDRaisedButton:
+            text: "Enviar"
+            size_hint: None, None
+            size: 200, 50
+            pos_hint: {"center_x": 0.5}
+            on_press: root.submit_form(direccion.text, adultos.text, menores.text)
+
+        # Etiqueta para mostrar el mensaje de éxito/error
+        MDLabel:
+            id: message_label
+            text: ""
+            theme_text_color: "Secondary"
+            size_hint_y: None
+            height: "40dp"
+            halign: "center"
+
+        MDRaisedButton:
+            text: "Volver al Inicio"
+            size_hint: None, None
+            size: 200, 50
+            pos_hint: {"center_x": 0.5}
+            on_press: root.go_to_main()
