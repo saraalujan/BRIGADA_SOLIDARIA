@@ -3,26 +3,90 @@
 <MainScreen>:
     BoxLayout:
         orientation: 'vertical'
-        
-        MDRaisedButton:
-            text: "Ir al Mapa"
-            size_hint: None, None
-            size: 200, 50
-            pos_hint: {"center_x": 0.5}
-            on_press: root.go_to_map()
 
-        MDRaisedButton:
-            text: "Ir al Formulario"
+        canvas.before:
+            Color:
+                rgba: 0.8, 0.5, 0.3, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        FloatLayout:
             size_hint: None, None
-            size: 200, 50
-            pos_hint: {"center_x": 0.5}
-            on_press: root.go_to_form()
+            size: 1200, 675
+            pos_hint: {'center_x':0.5, 'center_y':0.5}
+
+            Image:
+                source: 'portada.jpg'
+                size_hint: None, None
+                size: 1200, 675
+                pos_hint: {'center_x':0.5, 'center_y':0.5}
+
+        FloatLayout:
+            size_hint: None, None
+            size: 1200, 50
+            pos_hint: {'center_x':0.5, 'center_y':1.2}
+
+            Label:
+                text: "Brigada Solidaria"
+                font_size: 50
+                color: 0.3, 0.1, 0.05, 1
+                size_hint: None, None
+                size: self.texture_size
+                pos_hint: {'center_x':0.5, 'center_y':1.2}
+
+                shadow_offset: 4, -4
+                shadow_color: 0, 0, 0, 0.5
+
+                outline_width: 2
+                outline_color: 0.8, 0.6, 0.4, 1
+
+        FloatLayout:
+            size_hint: None, None
+            height: '80dp'
+            width: self.parent.width
+            pos_hint: {'center_x':0.5, 'y':0}
+
+            MDRaisedButton:
+                text: "Ir al Mapa"
+                size_hint: None, None
+                size: 200, 50
+                pos_hint: {'center_x':0.25, 'center_y':0.75}
+                md_bg_color: 0.6, 0.3, 0.1, 1
+                on_press: root.go_to_map()
+
+            MDRaisedButton:
+                text: "Ir al Formulario"
+                size_hint: None, None
+                size: 200, 50
+                pos_hint: {'center_x':0.75, 'center_y':0.75}
+                md_bg_color: 0.6, 0.3, 0.1, 1
+                on_press: root.go_to_form()
 
 
 <MapScreen>:
     BoxLayout:
         orientation: 'vertical'
 
+        canvas.before:
+            Color:
+                rgba: 0.8, 0.5, 0.3, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    FloatLayout:
+        size_hint: None, None
+        size: 900, 600
+        pos_hint: {'center_x':0.5, 'center_y':0.5}
+
+        canvas.before:
+            Color:
+                rgba: 0.4, 0.2, 0.1, 1
+            Line:
+                width: 10
+                rectangle: (self.x, self.y, self.width, self.height)
+        
         # El mapa
         MapView:
             id: mapview  # Asignar un id al MapView
@@ -30,13 +94,21 @@
             lat: -34.6037  # Coordenadas de Buenos Aires
             lon: -58.3816
             size_hint: 1, 0.8  # El mapa ocupa el 80% de la pantalla
+            pos_hint: {'center_x':0.45, 'center_y':0.5}
+
+    FloatLayout:
+        size_hint: None, None
+        height: '80dp'
+        width: self.parent.width
+        pos_hint: {'center_x':0.5, 'y':0}
 
         # Botón para cargar los casos desde la API
         MDRaisedButton:
             text: "Mostrar Casos"
             size_hint: None, None
             size: 200, 50
-            pos_hint: {"center_x": 0.5}
+            pos_hint: {'center_x':0.25, 'center_y':0.75}
+            md_bg_color: 0.6, 0.3, 0.1, 1
             on_press: root.mostrar_casos(self)
             
 
@@ -44,54 +116,87 @@
             text: "Volver al Inicio"
             size_hint: None, None
             size: 200, 50
-            pos_hint: {"center_x": 0.5}
+            pos_hint: {'center_x':0.75, 'center_y':0.75}
+            md_bg_color: 0.6, 0.3, 0.1, 1
             on_press: root.go_to_main()
 
 
 <FormScreen>:
+    canvas.before:
+        Color:
+            rgba: 0.9, 0.6, 0.3, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
     BoxLayout:
         orientation: 'vertical'
+        size_hint: 1, None
+        height: self.parent.height * 0.6
+        #padding: [50, 100, 50, 20]
+        
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 10
 
-        MDTextField:
-            id: direccion
-            hint_text: "Dirección"
-            size_hint: 1, None
-            height: "40dp"
-            pos_hint: {"center_x": 0.5}
+            MDTextField:
+                id: direccion
+                hint_text: "Dirección"
+                hint_text_color: 1, 1, 1, 1
+                text_color: 1, 1, 1, 1
+                size_hint: 1, None
+                height: "40dp"
+                pos_hint: {"center_x": 0.5}
+                multiline: False
 
-        MDTextField:
-            id: adultos
-            hint_text: "Cantidad de adultos"
-            size_hint: 1, None
-            height: "40dp"
-            pos_hint: {"center_x": 0.5}
+            MDTextField:
+                id: adultos
+                hint_text: "Cantidad de adultos"
+                hint_text_color: 1, 1, 1, 1
+                text_color: 1, 1, 1, 1
+                size_hint: 1, None
+                height: "40dp"
+                pos_hint: {"center_x": 0.5}
+                multiline: False
 
-        MDTextField:
-            id: menores
-            hint_text: "Cantidad de menores"
-            size_hint: 1, None
-            height: "40dp"
-            pos_hint: {"center_x": 0.5}
+            MDTextField:
+                id: menores
+                hint_text: "Cantidad de menores"
+                hint_text_color: 1, 1, 1, 1
+                text_color: 1, 1, 1, 1
+                size_hint: 1, None
+                height: "40dp"
+                pos_hint: {"center_x": 0.5}
+                multiline: False
 
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: 1, None
+        height: '120dp'
+        width: self.parent.width
+        
         MDRaisedButton:
             text: "Enviar"
             size_hint: None, None
             size: 200, 50
-            pos_hint: {"center_x": 0.5}
+            pos_hint: {'center_x':0.25, 'center_y':0.75}
+            md_bg_color: 0.6, 0.3, 0.1, 1
             on_press: root.submit_form(direccion.text, adultos.text, menores.text)
-
-        # Etiqueta para mostrar el mensaje de éxito/error
-        MDLabel:
-            id: message_label
-            text: ""
-            theme_text_color: "Secondary"
-            size_hint_y: None
-            height: "40dp"
-            halign: "center"
 
         MDRaisedButton:
             text: "Volver al Inicio"
             size_hint: None, None
             size: 200, 50
-            pos_hint: {"center_x": 0.5}
+            pos_hint: {'center_x':0.75, 'center_y':0.75}
+            md_bg_color: 0.6, 0.3, 0.1, 1
             on_press: root.go_to_main()
+        
+    # Etiqueta para mostrar el mensaje de éxito/error
+    MDLabel:
+        id:message_label
+        text: ""
+        theme_text_color: "Secondary"
+        size_hint_y: None
+        height: "40dp"
+        halign: "center"
+        pos_hint: {"center_x":0.5, "center_y":0.2}
