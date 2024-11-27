@@ -5,12 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-/* =======================================================
-*
-* 	Template Style 
-*	Edit this section
-*
-* ======================================================= */
 
 body {
   font-family: "Roboto", Arial, serif;
@@ -35,208 +29,72 @@ body {
   width: 100%;
 }
 
-/*Hace mas pequeña la imagen de las integrantes del grupo*/
-.img-small{
-  width: 200px;
-  height: auto;
-  max-width: 100%;
-  display:block;
-  margin: 0 auto;
-}
-
-/*Enmarca los filtros de buscar centros*/
-form{
-  background-color: #f8f8f8;
-  padding:20px;
-  border-radius: 4px;
-  box-shadow: 0px 1px 10px rgba(177, 94, 40, 0.445);
-  margin-bottom: 30px;
-}
-
-/*Negrita de las letras del formulario de buscar centros*/
-form label{
-  font-size: 16px;
-  font-weight: bold;
-  display:block;
-  margin-bottom:8px;
-  color:#181717c2;
-}
-
-/*Centra el boton buscar debajo de los filtros*/
-form input[type="text"], form input[type="int"]{
-  width:100%;
-  padding:10px;
-  margin-bottom: 15px;
-  border:1px solid #ccc;
-  font-size:14px;
-  box-sizing: border-box;
-}
-
-/*Cambia algunos estilos de los botones buscar*/
-form input[type="submit"], form button{
-  background-color: #d3c3b5d2;
-  color:black;
-  border:none;
-  padding:10px 20px;
-  border-radius: 2px;
-  font-size: 16px;
-  transition: background-color 0.3s ease, text-shadow 0.2s ease;
-}
-
-/*Brillo del boton buscar dentro de buscar centros*/ 
-form input[type="submit"]:hover, form button:hover{
-  background-color: #b8915ed2;
-  color:white;
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
-}
-
-/*Cambia estilos de boton añadir centros*/
-form input[type="añadir"], form button{
-  background-color: #6F4E37;
-  color:white;
-  border:none;
-  padding:10px 20px;
-  border-radius: 2px;
-  font-size: 16px;
-  transition: background-color 0.3s ease, text-shadow 0.2s ease;
-}
-
-/*Brillo del boton añadir centro dentro de añadir centro*/ 
-form input[type="añadir"]:hover, form button:hover{
-  background-color: #b8915ed2;
-  color:white;
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
-}
-
-/*CREO Color de la infromacion al filtrar los centros*/
-a {
-  color: #bd844ff5;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-/*Cambios en el estilo de la base de datos al buscar centros*/
-a:hover {
-  text-decoration: none !important;
-  color: #bd844ff5 !important;
-  text-shadow: 0 0 10px #bd844ff5;
-}
-
-/*Cambia el estilo de el texto en sobre nosotros*/
-p, ul, ol {
-  margin-bottom: 1.5em;
-  font-size: 18px;
-  color: #848484;
-  font-family: "Roboto", Arial, serif;
-}
-
-/*Cambia los estilos del mision y vision*/
-h1, h2, h3, h4, h5, h6 {
-  color: #212121;
-  font-family: "Roboto Slab", Arial, sans-serif;
-  font-weight: 400;
-  margin: 0 0 30px 0;
-}
-
-/*SUPUESTAS LETRAS BASE DE DATOS*/
-
-
-#fh5co-services-section{
-  margin-top:50px;
-  padding:20px;
-  position:relative;
-}
-
-#fh5co-services-section .row{
-  margin-top: 25px;
-}
-
-#fh5co-services-section .col-md-6{
-  margin-bottom:20px;
-  padding-left:15px;
-  padding-right:15px;
-}
-
-#fh5co-services-section .card-title{
-  font-size:2.25rem;
-  text-decoration: underline;
-  color:#8a6e4a;
-  font-weight: bold;
-  margin-bottom: 20px;
-  transition:all 0.3s ease;
-  text-shadow: 1px 1px 3px rgba(90, 62, 43, 0.5);
-}
-
-#fh5co-services-section .card-title:hover{
-  color:#5a3e2b;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  transform: scale(1.1);
-
-}
-
-#fh5co-services-section p.card-text strong{
-  color:#5a3e2b;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-#fh5co-services-section p.card-text{
-  color:rgba(0,0,0,0.8);
-  margin-bottom:10px;
-  line-height:1.5;
-}
-
-#fh5co-services-section .centros{
+/*LOGO-----------------------------------------------------------*/
+#fh5co-logo {
+  z-index: 2;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  float: left;
+  margin-bottom: 0;
+  margin-top: 1.05em;
   display:flex;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width:100%;
+  align-items:center;
+  justify-content: flex-start;
 }
 
-#fh5co-services-section .fh5co-heading{
-  display:flex;
-  justify-content: center;
+#fh5co-logo a {
+  display: flex;
   align-items: center;
-  text-align: center;
-  margin: 0 auto;
-  height: 10px 0;
+  text-decoration: none;
 }
 
-
-
-#fh5co-services-section .fh5co-heading h2{
-  font-size:3rem;
-  color:rgb(126, 102, 75);
-  text-shadow: 2px 2px 5px rgba(93, 56, 38, 0.4);
-  margin-top:40px;
-  font-size: 35px;
-  transition: all 0.3s ease;
+#fh5co-logo img{
+  max-height: 45px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
-#fh5co-services-section .fh5co-heading h2:hover{
-  font-size:2.5rem;
-  color:rgb(175, 152, 109);
-  text-shadow: 2px 2px 10px rgba(93, 56, 38, 0.6);
-  font-size:3.5rem;
-  transform:scale(1.1);
+/*TITULO BRIGADA_SOLIDARIA PRINCIAPL */
+#fh5co-logo h3 {
+  margin: 0; 
+  padding: 0; 
+  font-weight: 700;
+  color: #000000; 
+  font-size:25px;
 }
 
-
-/*Cambio de color al pasar el mouse encima de añadir centro*/
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #DAC0A3 !important;
-  border-color: #DAC0A3 !important;
+/*OSITO---------------------------------------------------------*/
+/*el nivelado de la foto con la parte de abajo del difuinado */
+#fh5co-hero {
+  min-height: 700px;
 }
 
-/*Color de la letra boton de añador centros*/
-.btn-success.btn-outline:hover, .btn-success.btn-outline:focus, .btn-success.btn-outline:active {
-  background: #5cb85c;
-  color: #fff;
+#fh5co-hero .flexslider {
+  border: none;
+  z-index: 1;
+  margin-bottom: 0;
 }
 
+/*lo que se extiende del difuminado hacia abajo*/
+#fh5co-hero .flexslider .slides li {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 700px !important;
+}
+
+/*difuminado osito*/
+#fh5co-hero .flexslider .slides .overlay-gradient {
+  position: absolute;
+  top: 0;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/*MENU----------------------------------------------------------*/
 /* Pequeña linea debajo del menu */
 .sf-menu {
   margin: 0 !important;
@@ -269,6 +127,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab", Arial, sans-serif;
   letter-spacing: 1px;
 }
+
 /*Sombra al pasa el mouse arriba de las opciones del menu*/
 .sf-menu a:hover, .sf-menu a:focus, .sf-menu a.active {
   background: #e6e6e6 !important;
@@ -299,88 +158,9 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.22);
 }
 
-/*--------------------------------------------------------------------------------*/
-.nav-header {
-  position: relative;
-  float: left;
-  width: 100%;
-}
-/*PARTE SARI--------------------------------------------------------------------------*/
+/*INDEX--------------------------------------------------------------------*/
 
-/*MARGEN DE ARRIBA DONDE ESTA LOS COSOS PARA IR A LOS ENLACES*/
-
-#fh5co-logo {
-  z-index: 2;
-  font-size: 30px;
-  text-transform: uppercase;
-  font-weight: 700;
-  float: left;
-  margin-bottom: 0;
-  margin-top: 1.05em;
-  display:flex;
-  align-items:center;
-  justify-content: flex-start;
-}
-
-
-/*LOGO CACTUS--------------- */
-
-#fh5co-logo a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-#fh5co-logo img{
-  max-height: 45px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-/*----------------------------*/
-
-/*TITULO BRIGADA_SOLIDARIA PRINCIAPL */
-#fh5co-logo h3 {
-  margin: 0; 
-  padding: 0; 
-  font-weight: 700;
-  color: #000000; 
-  font-size:25px;
-}
-
-/*ES EL FONDO NEGRO DEL OSITO-----------------------------------------------------*/
-
-/*el nivelado de la foto con la parte de abajo del difuinado */
-#fh5co-hero {
-  min-height: 700px;
-}
-
-#fh5co-hero .flexslider {
-  border: none;
-  z-index: 1;
-  margin-bottom: 0;
-}
-
-/*lo que se extiende del difuminado hacia abajo*/
-#fh5co-hero .flexslider .slides li {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  min-height: 700px !important;
-}
-
-/*difuminado osito*/
-#fh5co-hero .flexslider .slides .overlay-gradient {
-  position: absolute;
-  top: 0;
-  bottom: -15px;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.3);
-}
-/*----------------------------------------------------------------------------*/
-
-
-/*TITULOS DE LAS PAGINAS  EN PANTALLA "SOBRE_NOSOTROS, CENTROS, ETC ------------------------*/
+/*TITULO EN PANTALLA "SOBRE_NOSOTROS, ETC---------------*/
 
 #fh5co-hero .flexslider .slider-text {
   display: table;
@@ -408,88 +188,6 @@ h1, h2, h3, h4, h5, h6 {
     0px 01px 1px black;
 }
 
-/*-------------------------------------------------------------------------------------------------*/
-
-
-/*cuadro de JS del inicio "que dice proyecto ong"*/
-#fh5co-hero .flexslider .slider-text > .slider-text-inner .desc {
-  padding: 2em;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: rgba(219, 161, 107, 0.7);
-}
-#fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
-  font-size: 30px;
-  font-weight: 300;
-  color: #fff;
-  line-height: 40px;
-}
-
-#fh5co-hero .flexslider .slider-text > .slider-text-inner .fh5co-lead {
-  font-size: 20px;
-  color: #fff;
-}
-
-/*-------------------------------------------------------------------------------*/
-
-/*el borde blanco de pantalla que tienen sobre nosotros y buscar centros*/
-#fh5co-work-section, #fh5co-services-section,
-#fh5co-team-section {
-  padding: 5em 0;
-  justify-content: center;
-}
-
-/*fondo de pantalla de form nuevos centros*/
-#fh5co-contact-section{
-  padding: 5em 0;
-  justify-content: center;
-  background-color: #eee5d8f1;
-}
-
-/*----------------------------duda de si es el form de la base de datos -----------------------------------*/
-.contact-form {
-  padding: 30px;  /* Espaciado interno del formulario */
-  border-radius: 10px;  /* Bordes redondeados */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  background: #A67B5B;
-  margin-top: 50px;  /* Separar el formulario de la parte superior */
-  color:#4a4a4a;
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-}
-
-.contact-form input, .contact-form textarea, .contact-form button{
-  width: 100%;
-  padding:10px;
-  border-radius: 5px;
-}
-
-
-
-#fh5co-services-section {
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  flex-direction: column; /* Organiza los formularios en columna */
-  margin-left:6.4em;
-  gap:20px;
-}
-
-.services-inner button{
-  padding: 10px 20px;
-  background-color: #cc946e;
-  color:white;
-  border:none;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-/*--------------------------------------------------------------------------*/
-
-/*------------IMAGENES INICIO-----------------------------------------------------------------*/
-
-
 /*toda la seccion donde estan puestas las fotos*/
 #fh5co-section {
   float: left;
@@ -500,8 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 /*tamaño de las fotos de inicio que llevan a los enlaces*/
 #fh5co-section .grid-project-section {
   position: relative;
-  
-  width: 33.333333333%; /*ocupa un tercio del padre que seria widht 100% en fh5co section*/
+  width: 33.333333333%; 
   float: left;
   overflow: hidden;
 }
@@ -552,13 +249,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto Slab', Arial, sans-serif;
 }
 
-/*El color de las letras cuando se ponen encima de "Centros" "Buscar centros" en las imagenes del inicio"*/
+/*El color de las letras cuando se ponen encima en las imagenes del inicio"*/
 #fh5co-section .grid-project-section:hover .desc h2 {
   color: #ffffff; 
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); 
 }
 
-/*El difuminado negro encima de las fotos del inicio de "BUscar centros" "centros"*/
+/*El difuminado negro encima de las fotos del inicio */
 #fh5co-section .grid-project-section:after {
   position: absolute;
   top: 15px;
@@ -573,52 +270,187 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
 }
 
-/*Color del fondo de las fotos de inicio cuando paso el mouse encima*/
+/*Color fondo de las fotos de inicio cuando paso el mouse encima*/
 #fh5co-section .grid-project-section:hover:after, #fh5co-section .grid-project-section:focus:after {
   background: rgba(0, 0, 0, 0.2);
 }
 
-/*separa los forms en dos y dos de buscar centro -----------------*/
+/*cuadro de JS del inicio "que dice proyecto ong"*/
+#fh5co-hero .flexslider .slider-text > .slider-text-inner .desc {
+  padding: 2em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(219, 161, 107, 0.7);
+}
+#fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 40px;
+}
+
+#fh5co-hero .flexslider .slider-text > .slider-text-inner .fh5co-lead {
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*CENTROS---------------------------------------------------------------------*/
+
+#map {
+  height:500px;
+  width:70%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin:40px auto;
+}
+
+
+/*BUSCAR CENTROS ----------------------------------------------------------------*/
+
+/*Enmarca los filtros de buscar centros*/
+form{
+  background-color: #f8f8f8;
+  padding:20px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 10px rgba(177, 94, 40, 0.445);
+  margin-bottom: 30px;
+}
+
+/*Negrita de las letras del formulario de buscar centros*/
+form label{
+  font-size: 16px;
+  font-weight: bold;
+  display:block;
+  margin-bottom:8px;
+  color:#181717c2;
+}
+
+/*Centra el boton buscar debajo de los filtros*/
+form input[type="text"], form input[type="int"]{
+  width:100%;
+  padding:10px;
+  margin-bottom: 15px;
+  border:1px solid #ccc;
+  font-size:14px;
+  box-sizing: border-box;
+}
+
+/*Cambia algunos estilos de los botones buscar*/
+form input[type="submit"], form button{
+  background-color: #d3c3b5d2;
+  color:black;
+  border:none;
+  padding:10px 20px;
+  border-radius: 2px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, text-shadow 0.2s ease;
+}
+
+/*Brillo del boton buscar dentro de buscar centros*/ 
+form input[type="submit"]:hover, form button:hover{
+  background-color: #b8915ed2;
+  color:white;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+/*Cambios en el estilo de la base de datos al buscar centros*/
+a:hover {
+  text-decoration: none !important;
+  color: #bd844ff5 !important;
+  text-shadow: 0 0 10px #bd844ff5;
+}
+
+/*separa los forms en dos y dos de buscar centro*/
 .services-inner {
   margin-bottom: 4em;
 }
 
-/*margen de la foto de sobre nosotros con los nombres de la sintegrantes*/
+/*SOBRE NOSOTROS ------------------------------------------------------*/
+
+/*Hace mas pequeña la imagen de las integrantes*/
+.img-small{
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+  display:block;
+  margin: 0 auto;
+}
+
+/*Cambia el estilo de el texto en sobre nosotros*/
+p, ul, ol {
+  margin-bottom: 1.5em;
+  font-size: 18px;
+  color: #848484;
+  font-family: "Roboto", Arial, serif;
+}
+
+/*Cambia los estilos del mision y vision*/
+h1, h2, h3, h4, h5, h6 {
+  color: #212121;
+  font-family: "Roboto Slab", Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+}
+
+/*margen de la foto de los nombres de la sintegrantes*/
 .fh5co-staff img {
   margin-bottom: 1.5em;
 }
 
-/*letra negrita en sobre nosotros en los nombres d eintegrantes----------*/
+/*letra negrita en sobre nosotros en los integrantes*/
 .fh5co-staff h3 {
   margin: 0 0 20px 0;
   font-weight: 700;
   font-size: 24px;
 }
 
-/*VERIFICADO HACIA ARRIBA--------------------------------------------------------------------------*/
+/*NUEVOS CENTROS ------------------------------------------------------------*/
 
-
-
-/*-----------------------------------------------------------------------------------*/
-
-#fh5co-contact-section .contact-info {
-  margin: auto;
-  padding: auto;
-
+/*Cambia estilos de boton añadir centros*/
+form input[type="añadir"], form button{
+  background-color: #6F4E37;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius: 2px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, text-shadow 0.2s ease;
 }
-#fh5co-contact-section .contact-info li {
-  list-style: none;
-  margin: auto;
-}
-#fh5co-contact-section .contact-info li i {
-  position: absolute;
-  top: .3em;
-  left: 0;
-  font-size: 22px;
-  color: rgba(0, 0, 0, 0.5);
-}
-/*ver si lo de arriba es del otro form----------------------*/
 
+/*Brillo del boton añadir centro dentro de añadir centro*/ 
+form input[type="añadir"]:hover, form button:hover{
+  background-color: #b8915ed2;
+  color:white;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+/*CREO Color de la infromacion al filtrar los centros*/
+a {
+  color: #bd844ff5;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/*Cambio de color al pasar el mouse encima de añadir centro*/
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background: #DAC0A3 !important;
+  border-color: #DAC0A3 !important;
+}
+
+/*Color de la letra boton de añador centros*/
+.btn-success.btn-outline:hover, .btn-success.btn-outline:focus, .btn-success.btn-outline:active {
+  color: #fff;
+}
+
+/*fondo de pantalla de form nuevos centros*/
+#fh5co-contact-section{
+  padding: 5em 0;
+  justify-content: center;
+  background-color: #eee5d8f1;
+}
 
 /*estilo de los cuadrados blancos y lo de dentro, en forms añadir centro */
 #fh5co-contact-section .form-control {
@@ -652,9 +484,128 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 30px;
 }
 
-/*------------------------------------------------SE QUEDA LO DE ARRIBA--------------*/
 
-/*------------------AGREGAMOS NOSOTRAS---------------------------------------------------------*/
+/*DATOS DE LA BASE DATOS AL BUSCAR EN BUSCAR CENTROS ------------------------*/
+/*SUPUESTAS LETRAS BASE DE DATOS*/
+
+#fh5co-services-section{
+  margin-top:50px;
+  padding:20px;
+  position:relative;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Organiza los formularios en columna */
+  margin-left:6.4em;
+  gap:20px;
+}
+
+#fh5co-services-section .row{
+  margin-top: 25px;
+}
+
+#fh5co-services-section .col-md-6{
+  margin-bottom:20px;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+#fh5co-services-section .card-title{
+  font-size:2.25rem;
+  text-decoration: underline;
+  color:#8a6e4a;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition:all 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(90, 62, 43, 0.5);
+}
+
+#fh5co-services-section .card-title:hover{
+  color:#5a3e2b;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+#fh5co-services-section p.card-text strong{
+  color:#5a3e2b;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#fh5co-services-section p.card-text{
+  color:rgba(0,0,0,0.8);
+  margin-bottom:10px;
+  line-height:1.5;
+}
+
+#fh5co-services-section .centros{
+  display:flex;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width:100%;
+}
+
+#fh5co-services-section .fh5co-heading{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  height: 10px 0;
+}
+
+#fh5co-services-section .fh5co-heading h2{
+  font-size:3rem;
+  color:rgb(126, 102, 75);
+  text-shadow: 2px 2px 5px rgba(93, 56, 38, 0.4);
+  margin-top:40px;
+  font-size: 35px;
+  transition: all 0.3s ease;
+}
+
+#fh5co-services-section .fh5co-heading h2:hover{
+  font-size:2.5rem;
+  color:rgb(175, 152, 109);
+  text-shadow: 2px 2px 10px rgba(93, 56, 38, 0.6);
+  font-size:3.5rem;
+  transform:scale(1.1);
+}
+
+.nav-header {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+/*el borde blanco de pantalla que tienen sobre nosotros y buscar centros*/
+#fh5co-work-section, #fh5co-services-section,
+#fh5co-team-section {
+  padding: 5em 0;
+  justify-content: center;
+}
+
+/*form de nuevos centros*/
+.contact-form {
+  padding: 30px;  /* Espaciado interno del formulario */
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  background: #A67B5B;
+  margin-top: 50px;  /* Separar el formulario de la parte superior */
+  color:#4a4a4a;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+/*boton añadir centro de nuevos centros*/
+.contact-form input, .contact-form textarea, .contact-form button{
+  width: 100%;
+  padding:10px;
+  border-radius: 5px;
+}
+
+/*FOOTER -----------------------------------------------------------------*/
 #footer {
   width: 100%;
   float: left;
@@ -677,8 +628,6 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 0 10px #bd844ff5;
 }
 
-/*----------------------------------------------------------------------------*/
-
 /*no hace nada pero si se saca de desconifugra la pagina*/
 #offcanvas-menu {
   position: absolute;
@@ -691,12 +640,3 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px;
   overflow-y: scroll !important;
 }
-
-#map {
-  height:500px;
-  width:70%;
-  border-radius: 10px;
-  overflow: hidden;
-  margin:40px auto;
-}
-/*----------------------------------------------------------------- TERMINA POR AHORA----------*/

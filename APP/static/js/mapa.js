@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
             const respuesta = await fetch('http://127.0.0.1:5001/api/v1/centros/direcciones');
             const datos = await respuesta.json();
-            return datos; // Se espera un array de direcciones
+            return datos;
         } catch (error) {
             console.error("Error al obtener las direcciones:", error);
             return [];
@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Si hay al menos tres resultados, intentamos encontrar el adecuado
             if (datos.length >= 3) {
-                // Intentamos seleccionar la opción que contenga "Ciudad Autónoma de Buenos Aires"
                 for (let i = 0; i < datos.length; i++) {
                     if (datos[i].display_name.includes("Ciudad Autónoma de Buenos Aires")) {
                         return {
@@ -41,14 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         };
                     }
                 }
-                // Si no encontramos una opción con "Ciudad Autónoma de Buenos Aires", seleccionamos la tercera opción
                 return {
                     lat: parseFloat(datos[2].lat),
                     lon: parseFloat(datos[2].lon),
                     nombre: direccion
                 };
             } else if (datos.length > 0) {
-                // Si no hay tres resultados, pero al menos uno, seleccionamos el primero
                 return {
                     lat: parseFloat(datos[0].lat),
                     lon: parseFloat(datos[0].lon),
@@ -78,6 +75,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Llamar a la función para mostrar las direcciones en el mapa
     mostrarDireccionesEnMapa();
 });
