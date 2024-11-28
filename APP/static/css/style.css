@@ -501,7 +501,7 @@ a {
 }
 
 #fh5co-services-section .row{
-  margin-top: 25px;
+  margin-top: 0px;
 }
 
 #fh5co-services-section .col-md-6{
@@ -560,7 +560,8 @@ a {
   font-size:3rem;
   color:rgb(126, 102, 75);
   text-shadow: 2px 2px 5px rgba(93, 56, 38, 0.4);
-  margin-top:40px;
+  margin-top:170px;
+  margin-bottom: 0px;
   font-size: 35px;
   transition: all 0.3s ease;
 }
